@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="section-header ">
+    <h2>INSCRIVEZ-VOUS</h2>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="card user-card">
+        <div class="card-body">
+          <div class="row">
+            <div *ngFor="let presentation of alluser" class="col-2">
+              <button *ngIf="presentation.userName != check" class="btn btn-primary user-button" (click)="goToChat(presentation.userName)">
+                {{presentation.userName}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

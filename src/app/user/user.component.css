@@ -1,0 +1,13 @@
+.feild {
+    font-size: 14px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.modal-header{
+    background: linear-gradient(120deg,#020505, #033e8c);
+}
+.modal-title{
+    color: antiquewhite;
+}
