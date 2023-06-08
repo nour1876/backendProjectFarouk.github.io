@@ -1,0 +1,432 @@
+<section class="section-hero  inner-page fixed;" style="background: linear-gradient(120deg,#020505, #033e8c);"id="home-section">
+</section>
+<div class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
+
+
+  <!-- NAVBAR -->
+
+
+  <header class="site-navbar mt-4">
+
+
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="site-logo col-6 "><a href="index.html"><img src="../../assets/img/SkillPro.png" style="width: 100;border-radius: 50%;"  alt=""
+              title=""></a></div>
+             
+        <nav class="mx-auto site-navigation d-flex aligin-items-center col-5">
+          <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+            <li><a href="postes">Poste</a></li>
+            <div class=" d-lg-none nav-item dropdown">
+              <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src=" assets/images/a.png" class="img-fluid rounded-circle " style="width: 40px;">
+                <!-- icône de profil -->
+              </div>
+              <div class="dropdown-menu " aria-labelledby="profileDropdown">
+                <a class="dropdown-item " href="r">Profile</a> <!-- lien vers les paramètres -->
+                <a href class="dropdown-item " (click)="logout()">Déconnexion</a>
+                 <!-- lien de déconnexion -->
+              </div>
+            </div>
+
+          </ul>
+        </nav>
+
+        <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+          <div class="ml-auto">
+
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="{{recruiter.logo}}" class="img-fluid rounded-circle " style="width: 40px;">
+              <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="c">Profile</a> <!-- lien vers les paramètres -->
+
+              <a href class="dropdown-item " (click)="logout()">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>
+          <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
+              class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+        </div>
+
+      </div>
+    </div>
+
+
+  </header>
+  <!--== Start Page Header Area Wrapper ==-->
+  <div class="page-header-area sec-overlay sec-overlay-black">
+    <div class="container pt--0 pb--0">
+      <div class="row">
+        <div class="col-12">
+          <div class="page-header-content"
+            [ngStyle]="{'background-image': 'url(' + recruiter.cover + ')', 'background-repeat': 'round'}">
+            <ngx-awesome-uploader [captions]=" captions" [uploadType]="'single'" [adapter]="adapter"
+              [enableCropper]="false" (uploadSuccess)="uploadSuccess($event)">
+            </ngx-awesome-uploader>
+            <img src="{{recruiter.logo}}" style="border-radius: 50%; height: 150px; width: 150px;" class="pic">
+            <div class="rec">
+            <h4>{{recruiter.username}}</h4>
+            <a href="mailto:{{recruiter.email}}">{{recruiter.email}}</a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="profile text-center">
+      <div class="localisation">
+        <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9 11.2308C10.7673 11.2308 12.2 9.92206 12.2 8.30769C12.2 6.69332 10.7673 5.38462 9 5.38462C7.23269 5.38462 5.8 6.69332 5.8 8.30769C5.8 9.92206 7.23269 11.2308 9 11.2308Z"
+            stroke="black" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M17 8.30769C17 14.8846 9 20 9 20C9 20 1 14.8846 1 8.30769C1 6.36957 1.84285 4.51083 3.34315 3.14037C4.84344 1.76992 6.87827 1 9 1C11.1217 1 13.1566 1.76992 14.6569 3.14037C16.1571 4.51083 17 6.36957 17 8.30769Z"
+            stroke="black" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p>{{recruiter.adress}}</p>
+      </div>
+      <div class="bg-c-green counter-block m-t-10 p-20">
+        <div class="row">
+          <div class="col-4">
+            <h6> Mes Offres:</h6><p> {{offer_count ? offer_count + ' offers' : '0 offers'}}</p>
+          </div>
+        </div>
+      </div>
+    
+        <button class="chat-button" (click)="goToChat()">
+          <i class="icon fas fa-comment"></i>
+          Chat
+        </button>
+        <hr> <hr>
+      
+      <div class="row">
+        <div class="col-5 mr-4 ml-4">
+          <button class="buttons" (click)="edit()">Modifier</button>
+        </div>
+        
+        <div class="col-5">
+          <button class="buttons1" routerLink="/candidaturesR">Mes Offres</button>
+        </div>
+      </div>
+      <form class="form-horizontal" name="form" (ngSubmit)="f.form.valid && completePofile()" #f="ngForm" novalidate>
+        <p class="text-left titles mt-4">Information de Base</p>
+        <div class="row">
+          <div class="col-5 mr-4 ml-4">
+            <label>Fondée en</label>
+            <input type="text" class="form-control" name="foundationDate" [(ngModel)]="recruiter.foundationDate"
+              #foundationDate="ngModel" [disabled]="locked">
+          </div>
+
+          <div class="col-5">
+            <label>Site Web</label>
+            <input type="text" class="form-control" placeholder="https://wwww.exemple.com..." name="website"
+              [(ngModel)]="recruiter.website" #website="ngModel" [disabled]="locked">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-11 ml-4">
+            <label class="label1">Siége Social </label>
+            <input type="text" class="form-control" name="headOffice" [(ngModel)]="recruiter.headOffice"
+              #headOffice="ngModel" [disabled]="locked">
+          </div>
+          <div class="col-11 ml-4">
+            <label class="label1"> Services </label>
+            <input type="text" class="form-control" placeholder="Ex: Consulting..." name="services"
+              [(ngModel)]="recruiter.services" #services="ngModel" [disabled]="locked">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 mr-4 ml-4">
+            <label class="zone ml-1">Gouvernorat</label>
+            <select class="form-control" name="gouvernorat" [(ngModel)]="recruiter.gouvernorat" #gouvernorat="ngModel"
+              [disabled]="locked">
+              <option value=""></option>
+              <option value="ARIANA">ARIANA</option>
+              <option value="BEJA">BEJA</option>
+              <option value="BENAROUS">BENAROUS</option>
+              <option value="BIZERTE">BIZERTE</option>
+              <option value="GABES">GABES</option>
+              <option value="GAFSA">GAFSA</option>
+              <option value="JENDOUBA">JENDOUBA</option>
+              <option value="KAIROUAN">KAIROUAN</option>
+              <option value="KASSERINE">KASSERINE</option>
+              <option value="KEBILI">KEBILI</option>
+              <option value="KEF">KEF</option>
+              <option value="MAHDIA">MAHDIA</option>
+              <option value="MANOUBA">MANOUBA</option>
+              <option value="MEDNINE">MEDNINE</option>
+              <option value="MONASTIR">MONASTIR</option>
+              <option value="NABEUL">NABEUL</option>
+              <option value="SFAX">SFAX</option>
+              <option value="SIDI BOUZID">SIDI BOUZID</option>
+              <option value="SILIANA">SILIANA</option>
+              <option value="SOUSSE">SOUSSE</option>
+              <option value="TATOUINE">TATOUINE</option>
+              <option value="TOZEUR">TOZEUR</option>
+              <option value="TUNIS">TUNIS</option>
+              <option value="ZAGHOUAN">ZAGHOUAN</option>
+            </select>
+          </div>
+          <div class="col-5">
+            <label>Ville</label>
+            <input type="text" class="form-control" name="city" [(ngModel)]="recruiter.city" #city="ngModel"
+              [disabled]="locked">
+          </div>
+        </div>
+
+        <p class="text-left titles mt-4">Section personalisé</p>
+        <div class="row">
+          <div class="col-11 ml-4">
+            <label class="label1">Titre de section</label>
+            <input type="text" class="form-control" [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="recruiter.sectionTitle" #sectionTitle="ngModel" [disabled]="locked">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-11 ml-4">
+            <label class="label1">Description</label>
+            <textarea class="form-control" [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="recruiter.sectionDescription" #sectionDescription="ngModel" [disabled]="locked"></textarea>
+          </div>
+        </div>
+        <button class="buttons mt-3" type="submit">OK</button>
+
+
+
+        <p class="text-left titles mt-4">A propos de moi</p>
+        <div class="row">
+          <div class="col-11 ml-4">
+            <label class="label2">Titre</label>
+            <input type="text" class="form-control" name="bio" [(ngModel)]="recruiter.bio" #bio="ngModel"
+              [disabled]="locked">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-11 ml-4">
+            <label class="label2">Détails</label>
+            <textarea class="form-control" name="details" [(ngModel)]="recruiter.details" #details="ngModel"
+              [disabled]="locked"></textarea>
+          </div>
+        </div>
+      </form>
+
+      <div class="main">
+        <div class="row mt-5 offer-section">
+          <div class="section-title-second">Offres récemment publiées</div>
+          <div class="row">
+            <div class="col-6 offer1">
+              <form (ngSubmit)="publishOfferrrrr()" class="form-horizontal" name="form" #f="ngForm" novalidate>
+                <div ngModelGroup="offerData">
+                  <select class="form-control mt-2" name="categorie" [(ngModel)]="formOffer.categorie"
+                    #categorie="ngModel">
+                    <option value="" disabled selected>Choisir un titre</option>
+                    <option value="Développement">Pharmacien</option>
+                    <option value="Ui Design">Medecin</option>
+                    
+                  </select>
+                  <input type="text" placeholder="Titre Offer" class="form-control mt-2" name="title"
+                    [(ngModel)]="formOffer.title" required #title="ngModel">
+                 
+
+                  <textarea placeholder="Description" class="form-control mt-2" name="description"
+                    [(ngModel)]="formOffer.description" required #description="ngModel"></textarea>
+                  
+                  <input type="number" placeholder="Prix" class="form-control mt-2" name="salaire"
+                    [(ngModel)]="formOffer.salaire" required #salaire="ngModel">
+                  
+
+                  <select [(ngModel)]="formOffer.localisation" name="localisation" required #localisation="ngModel"
+                    class="form-select form-control" data-style="btn-white btn-lg" data-width="100%"
+                    data-live-search="true" title="Select Région ">
+                    <option selected>Select Région</option>
+                    <option value="MONASTIR">MONASTIR</option>
+                    <option value="TUNIS">TUNIS</option>
+                    <option value="SOUSSE">SOUSSE</option>
+                    <option value="MAHDIA">MAHDIA</option>
+                    <option value="SFAX">SFAX</option>
+                    <option value="GABES">GABES</option>
+                    <option value="MEDNINE">MEDNINE</option>
+                    <option value="TATAOUINE">TATAOUINE</option>
+                    <option value="KEBILI">KEBILI</option>
+                    <option value="GAFSA">GAFSA</option>
+                    <option value="TOZEUR">TOZEUR</option>
+                    <option value="ARIANA">ARIANA</option>
+                    <option value="BEN AROUS">BEN AROUS</option>
+                    <option value="MANOUBA">MANOUBA</option>
+                    <option value="BEJA">BEJA</option>
+                    <option value="JANDOUBA">JANDOUBA</option>
+                    <option value="EL KEF">EL KEF</option>
+                    <option value="SIDI BOUZID">SIDI BOUZID</option>
+                    <option value="KASSERINE">KASSERINE</option>
+                    <option value="SELIANA">SELIANA</option>
+                    <option value="BIZERTE">BIZERTE</option>
+                    <option value="KAIROUAN">KAIROUAN</option>
+                    <option value="NABEUL">NABEUL</option>
+                    <option value="ZAGHOUAN">ZAGHOUAN</option>
+                    <option value="Tunis">Tunis</option>
+                    <option value="Medjez elbeb">Medjez elbeb</option>
+                  </select>
+                  
+
+                  <select class="form-control mt-2" name="nature_de_travail" [(ngModel)]="formOffer.nature_de_travail"
+                    #nature_de_travail="ngModel">
+                    <option value="" disabled selected>Choisir le type</option>
+                    <option value="Emploi">Emploi</option>
+                    <option value="Stage">Stage</option>
+                    <option value="Service">Service</option>
+                  </select>
+
+
+                </div>
+                <button class="buttons mt-3" type="submit">OK</button>
+              </form>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="offer-container">
+            <div *ngFor="let offer of recruiter.offerEntity"  class="offer-item" >
+              <div class="col-12 offer" >
+                <img src="{{recruiter.logo}}" class="logo-offer">
+                <div class="title-offer">{{offer.title}}</div>
+                <div class="city">{{offer.localisation}} </div>
+                <div class="city"> {{offer.description}}</div>
+                <div class="time"> il y a {{offer.diffDays}} jours</div>
+                <div class="row mt-2">
+                  <div class="col">
+                    <a>
+                      <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.5 1.68262C4 1.68262 1 9.58574 1 9.58574C1 9.58574 4 17.4871 11.5 17.4871C19 17.4871 22 9.58574 22 9.58574C22 9.58574 19 1.68262 11.5 1.68262Z"
+                          stroke="#1053BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M11.5 13.976C13.5711 13.976 15.25 12.0104 15.25 9.5858C15.25 7.16119 13.5711 5.19566 11.5 5.19566C9.42893 5.19566 7.75 7.16119 7.75 9.5858C7.75 12.0104 9.42893 13.976 11.5 13.976Z"
+                          stroke="#1053BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a (click)="openUpdateOfferModal(offer.id)">
+                      <svg width="23" height="27" viewBox="0 0 23 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M7.50852 25.5848H1.92979C1.68319 25.5848 1.4467 25.4701 1.27233 25.266C1.09796 25.0619 1 24.785 1 24.4963V18.4161C1 18.2732 1.02405 18.1316 1.07078 17.9996C1.1175 17.8675 1.18599 17.7475 1.27233 17.6464L15.2192 1.31882C15.3935 1.11468 15.63 1 15.8766 1C16.1232 1 16.3597 1.11468 16.5341 1.31882L21.7277 7.39899C21.902 7.60313 22 7.87999 22 8.16868C22 8.45737 21.902 8.73424 21.7277 8.93838L7.50852 25.5848ZM7.50852 25.5848H21.4553M7.50852 25.5848L1.05916 18.0345M12.1575 4.90316L18.666 12.5227"
+                          stroke="#1053BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a (click)="openDeleteOfferModal(offer.id)">
+                      <svg width="23" height="27" viewBox="0 0 23 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.3641 11.2437V19.4386M8.63683 11.2437V19.4386M22 5.09747L1 5.09748M20.0914 5.09747V24.5605C20.0914 24.8321 19.9908 25.0927 19.8118 25.2848C19.6328 25.4769 19.39 25.5848 19.1368 25.5848H3.8641C3.61094 25.5848 3.36815 25.4769 3.18914 25.2848C3.01013 25.0927 2.90956 24.8321 2.90956 24.5605V5.09747M16.2732 5.09747V3.04873C16.2732 2.50538 16.0721 1.98427 15.714 1.60006C15.356 1.21585 14.8704 1 14.3641 1H8.63683C8.13051 1 7.64492 1.21585 7.2869 1.60006C6.92888 1.98427 6.72774 2.50538 6.72774 3.04873V5.09747"
+                          stroke="#1053BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+<div id="delete-offer" class="delete-offer modal fade" >
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h2>Are you sure to delete ?</h2>
+          </div>
+          <div class="modal-footer">
+              <button class="btn btn-primary" (click)="deleteOffer()" >Yes</button>
+              <button class="btn btn-danger" (click)="closeModal('.delete-offer')">No</button>
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+
+</div>
+
+<div id="update-offer" class="update-offer modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form [formGroup]="formGroup" (ngSubmit)="updateOffer()" class="form-horizontal" name="form" #f="ngForm" novalidate>
+        <div formGroupName="offerData">
+          <select formControlName="categorie" class="form-control mt-2">
+            <option value="" disabled selected>Choisir un titre</option>
+            <option value="Développement">Développement</option>
+            <option value="Ui Design">Ui Design</option>
+            <option value="bricolage">Bricolage</option>
+          </select>
+          <input type="text" placeholder="Titre Offer" class="form-control mt-2" name="title"
+          formControlName="title"  required >
+       
+          
+
+          <textarea placeholder="Description" class="form-control mt-2" formControlName="description"></textarea>
+          
+
+          <input type="number" placeholder="Prix" class="form-control mt-2" formControlName="salaire">
+          
+
+          <select formControlName="localisation" class="form-select form-control mt-2">
+            <option selected>Select Région</option>
+            <option value="MONASTIR">MONASTIR</option>
+            <option value="TUNIS">TUNIS</option>
+            <option value="SOUSSE">SOUSSE</option>
+            <option value="MAHDIA">MAHDIA</option>
+            <option value="SFAX">SFAX</option>
+            <option value="GABES">GABES</option>
+            <option value="MEDNINE">MEDNINE</option>
+            <option value="TATAOUINE">TATAOUINE</option>
+            <option value="KEBILI">KEBILI</option>
+            <option value="GAFSA">GAFSA</option>
+            <option value="TOZEUR">TOZEUR</option>
+            <option value="ARIANA">ARIANA</option>
+            <option value="BEN AROUS">BEN AROUS</option>
+            <option value="MANOUBA">MANOUBA</option>
+            <option value="BEJA">BEJA</option>
+            <option value="JANDOUBA">JANDOUBA</option>
+            <option value="EL KEF">EL KEF</option>
+            <option value="SIDI BOUZID">SIDI BOUZID</option>
+            <option value="KASSERINE">KASSERINE</option>
+            <option value="SELIANA">SELIANA</option>
+            <option value="BIZERTE">BIZERTE</option>
+            <option value="KAIROUAN">KAIROUAN</option>
+            <option value="NABEUL">NABEUL</option>
+            <option value="ZAGHOUAN">ZAGHOUAN</option>
+            <option value="Tunis">Tunis</option>
+            <option value="Medjez elbeb">Medjez elbeb</option>
+          </select> 
+          <select formControlName="nature_de_travail" class="form-control mt-2">
+            <option value="" disabled selected>Choisir le type</option>
+            <option value="Emploi">Emploi</option>
+            <option value="Stage">Stage</option>
+            <option value="Service">Service</option>
+          </select>
+        </div>
+        <button class="buttons mt-3" type="submit">OK</button>
+        <button class="btn btn-danger" (click)="closeModal('.update-offer')">No</button>
+      </form>
+      
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+

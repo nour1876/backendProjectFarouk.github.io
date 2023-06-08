@@ -1,0 +1,753 @@
+<section class="section-hero  inner-page fixed;" style="background:#3F9FB7;" id="home-section">
+</section>
+<div class="site-wrap">
+
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>  <!-- .site-mobile-menu -->
+
+
+<!-- NAVBAR --> 
+
+
+<header class="site-navbar mt-4">
+    
+
+  <div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="site-logo col-6 "><a href="index.html" ><img src="assets/images/sarra.png" style="width: 100;"alt="" title=""></a></div>
+
+      <nav class="mx-auto site-navigation d-flex aligin-items-center col-7">
+        <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+          <li><a href="cl">Profile</a></li>
+
+          <li><a href="actualiteCl">Actualité</a></li>
+
+          <li><a href="sponsors">Sponsors</a></li>
+          <li><a href="coworkingCl">Coworking</a></li>
+          <li style="color: #f2f2f2;">20Px</li>
+
+ <li class="nav-item dropdown">
+            <a class=" nav-icon"  (click)="showNotifications = !showNotifications">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications" [ngClass]="{'show': showNotifications}">
+              <li class="dropdown-header ">
+                Vous avez 4 nouvelles notifications
+                <a href="notificationCl"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4">
+                <div>
+                  <h5 style="color: #3F9FB7 ;font-size: 19px;">Wevioo</h5>
+                  <p>Wevioo a apprové votre demande de sponsoring</p>
+                  <p class="small-text">30 min. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr role="tabpanel"class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4 ">
+                <div>
+                  <h5 style="color: #3F9FB7  ;font-size: 19px;">CareerBridge</h5>
+                  <p>Vous atteint 10 Xp vous pouvez profiter une réduction sur la pack premium</p>
+                  <p class="small-text">1 hr. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="dropdown-footer p-4">
+                <a href="notificationCl">Afficher toutes les notifications</a>
+              </li>
+            </ul>
+          </li>            <li class="nav-item dropdown" style="color: aliceblue;">
+            <div class="nav-link" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-grid-3x3-gap-fill large-icon"></i>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropDown" style="color: #fff;">
+              <a class="dropdown-item" href="#">Pack premium</a>
+              <a class="dropdown-item "style="color: #2474A6;" href="#" >1Xp</a>
+             
+            </div>
+          </li>
+          <div class=" d-lg-none nav-item dropdown">
+            <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src=" assets/images/boublilogo.png" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu " aria-labelledby="profileDropdown">
+              <a class="dropdown-item " href="cl">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item " href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>   
+          
+        </ul>
+      </nav>
+      
+      <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+        <div class="ml-auto">
+        
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src=" assets/images/boublilogo.png" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="cl">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item" href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+        </div>
+        <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+      </div>
+
+    </div>
+  </div>
+
+
+</header>
+
+
+<body id="top">
+    <body>
+  
+        
+   
+  <!-- Hero Area End -->
+        <!-- Job List Area Start -->
+        <div class="job-listing-area pt-120 pb-120 ">
+            <div class="container1 ml-5">
+                <div class="row">
+                    <!-- Left content -->
+                    <div class="col-xl-3 col-lg-3 col-md-4">
+                        <div class="row">
+                            
+                               
+                                    
+                                
+                                      <div class="profile">
+                                        <img src="assets/images/boublilogo.png" alt="" class="img-fluid rounded-circle">
+                                        <h1 class="text-dark">Boubli</h1>
+                                        <h2 class=" small text-dark mt-2 mb-2">boubli@gmail.com </h2>
+                                        <h5 class=" small text-muted "><i class="bi bi-geo-alt"></i><a href="index.html">Isamm Manouba</a></h5>
+                                        <div class="social-links mt-3 text-center"><div class="d-flex justify-content-center rounded-3 p-2 mb-2"
+                                            >
+                                            <div>
+                                               
+                                                <p class="mb-0">41</p>
+                                                <p class="small text-muted mb-1">Evenement</p>
+                                              </div><span class="mx-2">|</span>
+                                              <div class="px-3">
+                                                
+                                                <p class="mb-0">9</p>
+                                                <p class="small text-muted mb-1">Offre publieé</p>
+                                              </div><span class="mx-2">|</span>
+                                              <div>
+                                                
+                                                <p class="mb-0">8.5</p>
+                                                <p class="small text-muted mb-1">Abonnés</p>
+                                              </div> </div>
+                                        </div>
+                                      </div>
+                                      
+                <div class="col-md-6 mt-3 ">           
+                <a class="btn   btn-block text-white" style="background-color: #3F9FB7; "href="c" type="button">Modifier</a>
+              </div>
+              <div class="col-md-6 mt-3 "> 
+                <a class="btn   btn-block text-white" style="background-color: #6c757d; "href="eventCl" type="button">mes événement</a>
+                <br>  
+                  </div>   
+              
+                
+                  
+                  <h5 class="text-dark mt-4 mb-2">NOS VALEURS & ENGAGEMENTS </h5>   
+                                  <p class="small text-muted mb-1">Nos engagements et nos valeurs nous définissent et constituent le moteur de notre développement et la clé de notre réussite. Depuis toujours, nos priorités sont la satisfaction de nos clients, l’apport d’innovation, l’éthique de notre prestation ainsi que le bien être de nos employés.<br><br>    </p> 
+                                
+                                  <br>
+                                  <i class="bi bi-gift" style="color:#3F9FB7;">
+                             
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline"  style="color:#3F9FB7;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+inviter des membres
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="staticBackdropLabel">inviter des membres</h5>
+  
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+  
+    <label for="recipient-name" class="col-form-label">Ajoutez des adresses  e-mail:</label>
+    <input type="email" class="form-control form-control-lg" id="form-label" placeholder="nom@exemple.com"aria-label="">
+ 
+</div>
+<div class="modal-footer ">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+  <button type="button" class="btn btn-custom text-white" style="color:#3F9FB7;">Inviter</button>
+</div>
+</div>
+</div>
+</div>
+</i>
+
+
+
+                          <style>
+                             
+                              
+                              a:visited {
+                                color: #3F9FB7;
+                                background-color: transparent;
+                                text-decoration: none;
+                              }
+                              
+                              
+                              </style>
+
+  
+  
+                                  </div>
+                       
+                        <!-- Job Category Listing End -->
+                  
+  
+                        </div>
+                    
+  
+  
+  
+  
+  
+  
+                    <!-- Right content -->
+                    <div class="col-xl-8 col-lg-8 col-md-8">
+                        <!-- Featured_job_start -->
+                        <section class="featured-job-area">
+                            <div class="container ">
+                                <!-- Count of Job list Start -->
+                                <div class="row">
+                                    
+                                    <div class="col-lg-12">
+  
+  
+        
+       
+    
+  <style>
+  
+        /* styling search bar */
+        .search input[type=text]{
+            width:600px;
+            height:25px;
+            border:20px;
+            border-color: #3F9FB7;
+        }
+             
+        .search{
+            float:center;
+            margin:5px;
+        }
+             
+        .search button{
+            background-color: #3F9FB7;
+            color: #f2f2f2;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+  
+  </style>
+  
+  <!-- Job Category Listing start -->
+  <div class="job-category-listing mb-5 ">
+  <!-- single one -->
+  <div class="single-listing">
+     
+      <!-- ======= Features Section ======= -->
+      <section id="features" class="features">
+    
+        <div class="container">
+          
+          <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+  
+            <div class="col-md-11">
+              
+  
+              <img src="/assets/images/ad.jpg"  class="img-fluid" alt=""></div>
+              <div class="col-md-2">
+              <a href="#"><img src="assets/images/a.png" class="img-fluid rounded-circle " style="width:90px " alt=""></a><label class=" ml-3"style="font-size:px,text-secondary">
+              </label>
+              
+              </div>
+              
+            <div class="col-md-10">
+              
+  
+              <p   style="font-size: large; color:#3F9FB7;">Adactim
+              </p>
+              <p   style="font-size: 17px; color:#ADA7A7;">ADACTIM est un Opérateur de Services Managés spécialisé dans le Cloud, l’intégration et infogérance applicative, l’ERP et la BI
+                
+              </p>
+  
+           
+            </div>
+           
+            <div class="col-md-12">
+              <p  style="font-size: 15px; color:#ADA7A7;"> El Ghazala&nbsp;• &nbsp;Ariana  &nbsp;•&nbsp;Tunis</p>
+  
+                <a href="#!">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-2.webp" alt="avatar"
+                    class="img-fluid rounded-circle me-1" width="23">
+                </a>
+                <a href="#!">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-3.webp" alt="avatar"
+                    class="img-fluid rounded-circle me-1" width="23">
+                </a>
+                <a href="#!">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp" alt="avatar"
+                    class="img-fluid rounded-circle me-1" width="23">
+                  </a><label style="font-size: 15px; color:#ADA7A7;">3 Personnes de votre réseau suivent Wevioo
+                   
+                  </label>
+                 
+           </div>
+          
+            
+          
+    
+          </div><!-- Features Item -->
+  </div></section>
+     
+         
+  
+      
+              
+  <div class="modal-footer justify-content-start">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">S’abonner</button>
+  
+   <!-- Bouton pour ouvrir la première popup -->
+  <button type="button" class="btn btn-custom text-white ml-3" style="color:#3F9FB7;" data-toggle="modal" data-target="#modal1">
+    Demande sponsoring
+  </button>
+  
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal1Label"> Details demande</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div *ngIf="showForm">
+
+                  <label>Type Event</label>
+                  <input type="text" class="form-control" name="protfolio" placeholder="Ex:Conférences">
+
+                  <label>Sujet</label>
+                  <input type="text" class="form-control" name="protfolio" placeholder="Ecrire le sujet">
+
+                
+
+                  <label class=" mt-4"> Importer votre dossier de sponsoring</label>
+                  <input type="file" class="form-control" name="dossier" placeholder="Veuillez ajouter votre dossier de sponsoring">
+
+                  <div class="form-check"><br>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                     Envoyer  cette demande  à tous les sponsors 
+                    </label>
+                  </div>
+
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <!-- Bouton pour ouvrir la deuxième popup -->
+          <button type="button" class="btn btn-custom text-white ml-3" style="color:#3F9FB7;" data-toggle="modal" data-target="#modal2">
+            Envoyer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+           
+                              
+                              
+                              
+                              
+                              
+                              
+  
+  
+  
+  
+  
+                              
+                              
+                                    
+                                        
+  
+  
+  
+  
+  
+  
+  
+                 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                                    </div>
+                                </div>
+                             
+                      
+  <!-- Job Category Listing start -->
+  <div class="job-category-listing mb-5 ">
+    <!-- single one -->
+    <div class="single-listing">
+       
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features">
+      
+          <div class="container">
+            
+            <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+    
+              <div class="col-md-11">
+                
+    
+                <img src="/assets/images/wev1.png"  style="width: 800;" class="img-fluid" alt=""></div>
+                <div class="col-md-2">
+                <a href="#"><img src="assets/images/R.png" class="img-fluid rounded-circle " style="width:90px " alt=""></a><label class=" ml-3"style="font-size:px,text-secondary">
+                </label>
+                
+                </div>
+                
+              <div class="col-md-10">
+                
+    
+                <p   style="font-size: large; color:#3F9FB7;">Wevioo
+                </p>
+                <p   style="font-size: 17px; color:#ADA7A7;">Depuis sa création, le groupe Wevioo accompagne ses clients dans leurs projets de transformation digitale
+                  
+                </p>
+    
+             
+              </div>
+             
+              <div class="col-md-12">
+                <p  style="font-size: 15px; color:#ADA7A7;"> Ariana&nbsp;• &nbsp;Tunis  &nbsp;</p>
+    
+                  <a href="#!">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-2.webp" alt="avatar"
+                      class="img-fluid rounded-circle me-1" width="23">
+                  </a>
+                  <a href="#!">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-3.webp" alt="avatar"
+                      class="img-fluid rounded-circle me-1" width="23">
+                  </a>
+                  <a href="#!">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp" alt="avatar"
+                      class="img-fluid rounded-circle me-1" width="23">
+                    </a><label style="font-size: 15px; color:#ADA7A7;">3 Personnes de votre réseau suivent Wevioo
+                     
+                    </label>
+                   
+             </div>
+            
+              
+            
+      
+            </div><!-- Features Item -->
+    </div></section>
+       
+           
+    
+                
+    <div class="modal-footer justify-content-start">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">S’abonner</button>
+      <button type="button" class="btn btn-custom text-white ml-3" style="color:#1053BB;"data-toggle="modal" data-target="#myModal">Demande sponsoring</button>
+      <!-- Popup -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Demande sponsoring</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+         
+              
+  
+            <form>
+                <div *ngIf="showForm">
+
+                  <label>Type Event</label>
+                  <input type="text" class="form-control" name="protfolio" placeholder="Ex:Conférences">
+
+                  <label>Sujet</label>
+                  <input type="text" class="form-control" name="protfolio" placeholder="Ecrire le sujet">
+
+                
+
+                  <label class=" mt-4"> Importer votre dossier de sponsoring</label>
+                  <input type="file" class="form-control" name="dossier" placeholder="Veuillez ajouter votre dossier de sponsoring">
+
+                  <div class="form-check"><br>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                     Envoyer  cette demande  à tous les sponsors 
+                    </label>
+                  </div>
+
+                </div>
+              </form>
+         
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Refuser</button>
+          <button type="button" class="btn btn-custom text-white" style="color:#3F9FB7;">Envoyer</button>    
+        </div>
+    </div>
+           
+            </div></div>
+    
+    
+    
+    
+             
+                                
+                                
+                                
+                                
+                                
+                                
+  
+  
+  
+  
+  
+                                
+                                
+                                      
+                                          
+  
+  
+  
+  
+  
+  
+  
+                   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                                
+                             
+                   
+  
+  
+  
+          </div>
+  
+  
+  
+     
+  
+                       <!-- Job Category Listing start -->
+  <div class="job-category-listing mb-5 ">
+    <!-- single one -->
+    <div class="single-listing">
+       
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features">
+      
+          <div class="container">
+            
+            <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+    
+              <div class="col-md-11">
+                
+    
+                <img src="/assets/images/stb1.jpg"  style="width: 800;" class="img-fluid" alt=""></div>
+                <div class="col-md-2">
+                <a href="#"><img src="assets/images/stb.png" class="img-fluid rounded-circle " style="width:90px " alt=""></a><label class=" ml-3"style="font-size:px,text-secondary">
+                </label>
+                
+                </div>
+                
+              <div class="col-md-10">
+                
+    
+                <p   style="font-size: large; color:#3F9FB7;">STB Bank
+                </p>
+                <p   style="font-size: 17px; color:#ADA7A7;">La Meilleure Banque Digitale en Afrique du Nord.
+                    (Arab Digital Banking Excellence Award 2018)
+                    
+                  
+                </p>
+    
+             
+              </div>
+             
+              <div class="col-md-12">
+                <p  style="font-size: 15px; color:#ADA7A7;"> Rue Hédi Nouira &nbsp;• &nbsp;Tunis  &nbsp;•&nbsp;Tunis</p>
+    
+                  <a href="#!">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-2.webp" alt="avatar"
+                      class="img-fluid rounded-circle me-1" width="23">
+                  </a>
+                  <a href="#!">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-3.webp" alt="avatar"
+                      class="img-fluid rounded-circle me-1" width="23">
+                  </a>
+                  <a href="#!">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp" alt="avatar"
+                      class="img-fluid rounded-circle me-1" width="23">
+                    </a><label style="font-size: 15px; color:#ADA7A7;">3 Personnes de votre réseau suivent Wevioo
+                     
+                    </label>
+                   
+             </div>
+            
+              
+            
+      
+            </div><!-- Features Item -->
+    </div></section>
+       
+           
+    
+        
+                
+    <div class="modal-footer justify-content-start">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">S’abonner</button>
+     <a button type="button" class="btn btn-custom text-white ml-3" style="color:#1053BB;"data-toggle="modal" data-target="#myModa3">Demande sponsoring</a>
+   <!--  
+  <div class="modal1 fade" id="myModa3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal1-dialog">
+      <div class="modal1-content">
+        <div class="modal1-header">
+          <h4 class="modal1-title">Details demande</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal1-body">
+         
+              
+  
+            <img src="/assets/images/orenda.jpg"  class="img-fluid" alt=""></div>
+            <div class="row ml-2">
+              <div class="col-md-2">
+                <a href="#"><img src="assets/images/orendalogo.jpg" class="img-fluid rounded-circle" style="width:90px" alt=""></a>
+              </div>
+              <div class="col-md-10 mt-2">
+                <label style="font-size:17px">Orenda Club Isamm</label>
+              
+            </div>
+            
+            <p   style="font-size: 16px; color:#ADA7A7;">Orenda junior Enterprise is a non profit organization with economic and educational vocation founded
+            </p>
+            <div class="row ">
+            <div class="col-md-6">
+            <p   style="font-size: 17px;  font-weight: bold;color:#1053BB;">Dossier sponsoring
+            </p></div>
+            <div class="col-md-6 ">
+              <a style="font-size:17px; color:#1053BB;"href="">Télécharger</a>
+            
+          </div></div>
+            
+         
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Refuser</button>
+          <button type="button" class="btn btn-custom text-white" style="color:#1053BB;">Approuvé</button>    
+        </div>
+    </div>
+           
+            </div></div>-->
+    
+    
+    
+    
+             
+                                
+                                
+                                
+                                
+                                
+                                
+  
+  
+  
+  
+  
+                                
+                                
+                                      
+                                          
+  
+  
+  
+  
+  
+  
+  
+                   

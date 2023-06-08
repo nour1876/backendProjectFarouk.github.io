@@ -1,0 +1,165 @@
+{
+    "questions": [{
+            "questionText": "Qu'est-ce que le design thinking ?",
+            "options": [{
+                    "text": " Une méthode pour résoudre des problèmes complexes en utilisant une approche centrée sur l'utilisateur",
+                    "correct": true
+                },
+                {
+                    "text": " Une méthode pour concevoir des interfaces utilisateur"
+                },
+                {
+                    "text": "Une méthode pour tester l'ergonomie d'un produit"
+                },
+                {
+                    "text": "Une méthode pour évaluer la qualité visuelle d'un produit"
+                }
+            ],
+            "explanation": "TS uses a colon (:) to separate the property name from the property type"
+        },
+        {
+            "questionText": "Qu'est-ce qu'un fichier vectoriel ?",
+            "options": [{
+                    "text": "Un fichier qui contient des images matricielles"
+                },
+                {
+                    "text": " Un fichier qui contient du texte"
+                },
+                {
+                    "text": "Un fichier qui ne peut pas être imprimé"
+                },
+                {
+                    "text": " Un fichier qui contient des images vectorielles",
+                    "correct": true
+                }
+            ],
+            "explanation": "TS uses a colon (:) to separate the property name from the property type"
+        },
+        {
+            "questionText": "Qu'est-ce qu'un wireframe ?",
+            "options": [{
+                    "text": "Un diagramme qui montre la structure et le contenu d'un produit"
+                },
+                {
+                    "text": "Une maquette de haute fidélité d'un produit",
+                    "correct": true
+                },
+                {
+                    "text": "Un outil pour tester la navigation d'un produit"
+                },
+                {
+                    "text": " Une méthode pour évaluer la qualité visuelle d'un produit"
+                }
+            ],
+            "explanation": "interfaces are typically used to list the properties and methods for an object"
+        },
+        {
+            "questionText": "Qu'est-ce qu'un prototype ?",
+            "options": [{
+                    "text": "Une représentation visuelle d'un produit"
+                },
+                {
+                    "text": "Une version complète et fonctionnelle d'un produit",
+                    "correct": true
+                },
+                {
+                    "text": "Une simulation d'un produit"
+                },
+                {
+                    "text": " Une maquette de haute fidélité d'un produit"
+                }
+            ],
+            "explanation": "number[] is another way of writing Array<number> in TypeScript"
+        },
+        {
+            "questionText": "Qu'est-ce que l'UI design ?",
+            "options": [{
+                    "text": "La conception de l'interface utilisateur d'un produit",
+                    "correct": true
+                },
+                {
+                    "text": " La conception de la structure de navigation d'un produit"
+                },
+                {
+                    "text": " La conception de la charte graphique d'un produit"
+                },
+                {
+                    "text": "La conception de l'expérience utilisateur d'un produit"
+                }
+            ],
+            "explanation": "a constructor is used by a class to take in parameters"
+        },
+        {
+            "questionText": "Qu'est-ce qu'un persona ?",
+            "options": [{
+                    "text": "Une méthode pour évaluer la viabilité financière d'un produit"
+                },
+                {
+                    "text": "Un outil pour tester la navigation d'un produit"
+                },
+                {
+                    "text": "Une description détaillée des caractéristiques d'un produit"
+                },
+                {
+                    "text": " Une représentation fictive d'un utilisateur type",
+                    "correct": true
+                }
+            ],
+            "explanation": "async is not used as an access modifier type in TypeScript"
+        },
+        {
+            "questionText": "Les professionnels chargés de la partie visible des pages et de l'interface directe avec les utilisateurs sont issus de   ",
+            "options": [{
+                    "text": "Soutien technique "
+                },
+                {
+                    "text": "Front End ",
+                    "correct": true
+                },
+                {
+                    "text": "Base de données "
+                },
+                {
+                    "text": "Centre de données  "
+                }
+            ],
+            "explanation": "the export keyword allows for the information to be transmitted between files"
+        },
+        {
+            "questionText": "Qu'est-ce qu'un persona ?",
+            "options": [{
+                    "text": "Une représentation fictive d'un utilisateur type",
+                    "correct": true
+                },
+                {
+                    "text": "Une description détaillée des caractéristiques d'un produit"
+                },
+                {
+                    "text": "Un outil pour tester la navigation d'un produit"
+                },
+                {
+                    "text": "Une méthode pour évaluer la viabilité financière d'un produit"
+                }
+            ],
+            "explanation": "filter is a method used to conditionally create a new array"
+        },
+        {
+            "questionText": "Qu'est-ce que l'UI design ?",
+            "options": [{
+                    "text": "La conception de l'interface utilisateur d'un produit",
+                    "correct": true
+                },
+                {
+                    "text": " La conception de la structure de navigation d'un produit"
+                },
+                {
+                    "text": "La conception de la charte graphique d'un produit"
+                },
+                {
+                    "text": "La conception de l'expérience utilisateur d'un produit"
+                }
+            ],
+            "explanation": "this.propertyName is the way to access a specific property within a class"
+        }
+    ]
+}

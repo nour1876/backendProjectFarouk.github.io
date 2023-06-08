@@ -1,0 +1,264 @@
+<section class="section-hero  inner-page fixed;" style="background: linear-gradient(120deg,#020505, #033e8c);" id="home-section">
+</section>
+<div class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
+
+
+  <!-- NAVBAR -->
+
+
+  <header class="site-navbar mt-4">
+
+
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="site-logo col-6 "><a href="index.html"><img src="../../assets/img/SkillPro.png" style="width: 100; border-radius: 50%;" alt=""
+              title=""></a></div>
+
+        <nav class="mx-auto site-navigation d-flex aligin-items-center col-5">
+          <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+            <li><a href="/c">Profile</a></li>
+            <li><a href="offre">offre</a></li>
+            <div class=" d-lg-none nav-item dropdown">
+              <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="{{candidate.logo}}" class="img-fluid rounded-circle " style="width: 40px;">
+                <!-- icône de profil -->
+              </div>
+              <div class="dropdown-menu " aria-labelledby="profileDropdown">
+                <a class="dropdown-item " href="c">Profile</a> <!-- lien vers les paramètres -->
+                <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+                <a href class="dropdown-item " (click)="logout()">Déconnexion</a> <!-- lien de déconnexion -->
+              </div>
+            </div>
+
+          </ul>
+        </nav>
+
+        <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+          <div class="ml-auto">
+
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="{{candidate.logo}}" class="img-fluid rounded-circle " style="width: 40px;">
+              <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a href class="dropdown-item " (click)="logout()">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>
+          <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
+              class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+        </div>
+
+      </div>
+    </div>
+
+
+  </header>
+
+
+
+  <body id="top">
+
+
+
+
+
+
+
+
+    <section>
+      <!-- Hero Area Start-->
+      <div class="slider-area ">
+        <div class="single-slider section-overly slider-height2 d-flex align-items-center"
+          style="background-image: url('assets/images/7.jpg');" id="home-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-15">
+
+                <div class="mb-5 text-center">
+                  <h1 class="text-white font-weight-bold">Prenez un coup d'oeil sur nos services </h1>
+                  <p class="text-light ">Soyez la bienvenue</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Area End -->
+    <!-- Job List Area Start -->
+    <div class="job-listing-area pt-120 pb-120 ">
+      <div class="container1 ml-5">
+        <div class="row">
+          <!-- Left content -->
+          <div class="col-xl-3 col-lg-3 col-md-4">
+            <!-- Job Category Listing start -->
+            <div class="job-listing-area pt-120 pb-120">
+              <div class="container ml-5">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="small-section-title mb-4">
+                      <h4>Filters</h4>
+                    </div>
+            
+                    <div class="job-category-listing">
+                      <div class="single-listing">
+                        <div class="form-group">
+                          <label for="inputState">Localisation</label>
+                          <select [(ngModel)]="selectedRegion" id="inputState" class="form-select">
+                            <option selected></option>
+                            <option value="MONASTIR">MONASTIR</option>
+                            <option value="TUNIS">TUNIS</option>
+                            <option value="SOUSSE">SOUSSE</option>
+                            <option value="MAHDIA">MAHDIA</option>
+                            <option value="SFAX">SFAX</option>
+                            <option value="GABES">GABES</option>
+                            <option value="MEDNINE">MEDNINE</option>
+                            <option value="TATAOUINE">TATAOUINE</option>
+                            <option value="KEBILI">KEBILI</option>
+                            <option value="GAFSA">GAFSA</option>
+                            <option value="TOZEUR">TOZEUR</option>
+                            <option value="ARIANA">ARIANA</option>
+                            <option value="BEN AROUS">BEN AROUS</option>
+                            <option value="MANOUBA">MANOUBA</option>
+                            <option value="BEJA">BEJA</option>
+                            <option value="JANDOUBA">JANDOUBA</option>
+                            <option value="EL KEF">EL KEF</option>
+                            <option value="SIDI BOUZID">SIDI BOUZID</option>
+                            <option value="KASSERINE">KASSERINE</option>
+                            <option value="SELIANA">SELIANA</option>
+                            <option value="BIZERTE">BIZERTE</option>
+                            <option value="KAIROUAN">KAIROUAN</option>
+                            <option value="NABEUL">NABEUL</option>
+                            <option value="ZAGHOUAN">ZAGHOUAN</option>
+                            <option value="Medjez elbeb">Medjez elbeb</option>
+                            <option value="Tunis">Tunis</option>
+                            <option value="Medjez elbeb">Medjez elbeb</option>
+                            <option value="Medjez elbeb">Medjez elbeb</option>
+                          </select>
+                        </div>
+            
+                        <div class="form-group">
+                          <label for="keywordInput">Recherche par mots</label>
+                          <input [(ngModel)]="keyword" type="text" class="form-control" id="keywordInput"
+                            placeholder="Ex: Design">
+                        </div>
+            
+                        <div class="d-flex justify-content-center">
+                          <button (click)="filterOffers()" type="submit" class="btn btn-primary">Recherche</button>
+                        </div>
+                      </div>
+                    </div>
+                  
+
+                  </div>
+
+                  <!-- select-Categories End -->
+                </div>
+
+              </div>
+            </div>
+            <!-- Job Category Listing End -->
+
+
+          </div>
+          <!-- Right content -->
+          <div class="col-xl-6 col-lg-6 col-md-8">
+            <!-- Featured_job_start -->
+            <section class="featured-job-area">
+              <div class="container ">
+                <!-- Count of Job list Start -->
+                <div class="row">
+
+                  <div class="col-lg-12">
+                
+
+                    <style>
+                      /* styling search bar */
+                      .search input[type=text] {
+                        width: 600px;
+                        height: 25px;
+                        border: 20px;
+                        border-color: #0470b7;
+                      }
+
+                      .search {
+                        float: center;
+                        margin: 5px;
+                      }
+
+                      .search button {
+                        background-color: #0074D9;
+                        color: #f2f2f2;
+                        float: right;
+                        padding: 5px 10px;
+                        margin-right: 16px;
+                        font-size: 12px;
+                        border: none;
+                        cursor: pointer;
+                      }
+                    </style>
+
+
+
+
+                  </div>
+                </div>
+               <!-- Count of Job list End -->
+<!-- single-job-content -->
+<div *ngFor="let offer of filteredOffers">
+  <div class="card mb-4">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="company-img">
+            <a><img src="{{offer.logo}}" width="300px" height="300px"></a>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h5 class="card-title">{{offer.company_name}}</h5>
+          <ul class="job-details-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                class="bi bi-geo-alt-fill text-secondary" viewBox="0 0 16 16">
+                <path
+                  d="M11.445 3.89A5 5 0 0 0 8 13.556a5 5 0 0 0-3.445-9.665l.89 3.112a1 1 0 0 0 1.934 0l.89-3.112zM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" />
+              </svg>
+              Localisation: {{offer.localisation}}
+            </li>
+          </ul>
+          <h6 class="card-subtitle mb-2 text-muted">{{offer.title}}</h6>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" (click)="offreDetail(offer.id)">Détails</button>
+    </div>
+  </div>
+</div>
+
+              </div>
+            </section>
+            <!-- Featured_job_end -->
+
+          </div>
+        </div>
+        <!-- Job Category Listing End -->
+      </div>
+    </div>
+    <app-footer></app-footer>

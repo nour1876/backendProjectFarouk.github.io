@@ -1,0 +1,537 @@
+<section class="section-hero  inner-page fixed;" style="background:#0B508C;" id="home-section">
+</section>
+<div class="site-wrap">
+
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>  <!-- .site-mobile-menu -->
+
+
+<!-- NAVBAR --> 
+
+
+<header class="site-navbar mt-4">
+    
+
+  <div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="site-logo col-6 "><a href="index.html" ><img src="assets/images/sarra.png" style="width: 100;"alt="" title=""></a></div>
+
+      <nav class="mx-auto site-navigation d-flex aligin-items-center col-6">
+        <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+          <li><a href="actualiteP">Actualité</a></li>
+          <li><a href="reservation">reservations</a></li>
+          <li style="color: #f2f2f2;">20Px</li>
+
+       
+ <li class="nav-item dropdown">
+            <a class=" nav-icon"  (click)="showNotifications = !showNotifications">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications" [ngClass]="{'show': showNotifications}">
+              <li class="dropdown-header ">
+                Vous avez 4 nouvelles notifications
+                <a href="notificationP"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4">
+                <div>
+                  <h5 style="color: #2474A6 ;font-size: 19px;">Wevioo</h5>
+                  <p>Un test envoyé par Wevioo vous attent</p>
+                  <p class="small-text">30 min. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr role="tabpanel"class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4 ">
+                <div>
+                  <h5 style="color: #2474A6  ;font-size: 19px;">CareerBridge</h5>
+                  <p>Vous atteint 75 Xp vous pouvez profiter une réduction sur la pack premium</p>
+                  <p class="small-text">1 hr. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="dropdown-footer p-4">
+                <a href="notificationP">Afficher toutes les notifications</a>
+              </li>
+            </ul>
+          </li>            <li class="nav-item dropdown" style="color: aliceblue;">
+            <div class="nav-link" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-grid-3x3-gap-fill large-icon"></i>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropDown" style="color: #fff;">
+              <a class="dropdown-item" href="#">Pack premium</a>
+              <a class="dropdown-item "style="color: #2474A6;" href="#" >1Xp</a>
+             
+            </div>
+          </li>
+          <div class=" d-lg-none nav-item dropdown">
+            <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src=" assets/images/cow1.png" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu " aria-labelledby="profileDropdown">
+              <a class="dropdown-item " href="cl">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametrep">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item " href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>   
+          
+        </ul>
+      </nav>
+      
+      <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+        <div class="ml-auto">
+        
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src=" assets/images/cow1.png" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametrep">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item" href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+        </div>
+        <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+      </div>
+
+    </div>
+  </div>
+
+
+</header>
+
+
+
+
+
+<body id="top">
+  <body>
+
+    <section>
+      <!-- Hero Area Start-->
+      <div class="slider-area ">
+          <div class="single-slider section-overly slider-height2 d-flex align-items-center" style="background-image: url('assets/images/bg.jpg');" id="home-section">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+              <label for="file-upload" >
+                <input id="file-upload" type="file" >
+</label></form>
+          </div>
+      </div>
+  </section>
+
+    <section>
+      
+      
+       
+ 
+      
+     
+                                
+                                <style>
+                                  /* Hide the default file input text */
+                                  input[type=file] {
+                                    opacity: 0;
+                                    position: absolute;
+                                    z-index: -1;
+                                  }
+                                  
+                                  /* Style the custom file upload button */
+                                  .custom-file-upload {
+                                    display: inline-block;
+                                   
+                                    border-radius: 4px;
+                                    padding: 6px 12px;
+                                    cursor: pointer;
+                                  }
+                                  
+                                  /* Style the file select text */
+                                  .file-select-text {
+                                    margin-left: 10px;
+                                  }
+                                </style>
+                                
+
+                              
+      
+ 
+<!-- Hero Area End -->
+      <!-- Job List Area Start -->
+      <div class="job-listing-area pt-0 pb-120 ">
+          <div class="container1 ml-5">
+              <div class="row">
+                  <!-- Left content -->
+                  <div class="col-xl-4 col-lg-4 col-md-4">
+                      <div class="row">
+                          
+                             
+                                  
+                              
+                                    <div class="profile">
+                                      <img src="assets/images/cow1.png" alt="" class="img-fluid rounded-circle">
+                                      <h1 class="text-dark">coworker</h1>
+                                      <h2 class=" small text-dark mt-2 mb-2">coworker@gmail.com </h2>
+                                      <h5 class=" small text-muted "><i class="bi bi-geo-alt"></i><a href="index.html">Tunis</a></h5>
+                                      <div class="social-links mt-3 text-center"><div class="d-flex justify-content-center rounded-3 p-2 mb-2"
+                                          >
+                                          <div>
+                                             
+                                              <p class="mb-0">0</p>
+                                              <p class="small text-muted mb-1">Espace publieé</p>
+                                            </div><span class="mx-2">|</span>
+                                            <div class="px-3">
+                                              
+                                              <p class="mb-0"></p>
+                                              <p class="small text-muted mb-1">
+                                            </div><span class="mx-2">|</span>
+                                            <div>
+                                              
+                                              <p class="mb-0">0</p>
+                                              <p class="small text-muted mb-1">Abonnés</p>
+                                            </div> </div>
+                                      </div>
+                                    </div>
+                                    
+              <div class="col-md-6 mt-3 ">           
+              <a class="btn   btn-block text-white" style="background-color: #2474A6; "href="c" type="button">Modifier</a>
+            </div>
+            <div class="col-md-6 mt-3 "> 
+              <a class="btn   btn-block text-white" style="background-color: #6c757d; "href="candidaturesR" type="button">mes Espaces</a>
+              <br>  
+                </div>   
+            
+              
+                
+                <form>
+                  <p class="text-left titles mt-4">Information de Base</p>
+
+                  <div class="row ">
+                    <div class="col-md-6">  
+                      <label class="form-label" for="form2Example17">Fondée en </label>
+                      <input type="date" class="form-control form-control" id="form-label" placeholder="/2000"aria-label="">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="form-label" for="form2Example17">cantact</label>
+                      <input class="form-control form-control" id="form-label" placeholder="lien fcbk ...."aria-label="">
+                      
+                    </div></div>
+                
+                  <div class="row ">
+                    <div class="col-12 ">
+                      <label class="form-label" for="form2Example17">Université</label>
+                      <input  class="form-control"id="form-label" placeholder=""aria-label="">
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col-6 ">
+                      <label class="zone ml-1">Gouvernorat</label>
+                      <select class="form-control">
+                        <option value="0"></option>
+
+                        <option value="0">ARIANA</option>
+                        <option value="0">BEJA</option>
+                        <option value="0">BENAROUS</option>
+                        <option value="0">BIZERTE</option>
+                        <option value="0">GABES</option>
+                        <option value="0">GAFSA</option>
+                        <option value="0">JENDOUBA</option>
+                        <option value="0">KAIROUAN</option>
+                        <option value="0">KASSERINE</option>
+                        <option value="0">KEBILI</option>
+                        <option value="0">KEF</option>
+                        <option value="0">MAHDIA</option>
+                        <option value="0">MANOUBA</option>
+                        <option value="0">MEDNINE</option>
+                        <option value="0">MONASTIR</option>
+                        <option value="0">NABEUL</option>
+                        <option value="0">SFAX</option>
+                        <option value="0">SIDI BOUZID</option>
+                        <option value="0">SILIANA</option>
+                        <option value="0">SOUSSE</option>
+                        <option value="0">TATOUINE</option>
+                        <option value="0">TOZEUR</option>
+                        <option value="0">TUNIS</option>
+                        <option value="0">ZAGHOUAN</option>
+            
+                      </select>
+            
+                    </div>
+            
+                    <div class="col-6">
+                      <label>ville</label>
+                      <input  class="form-control">
+                    </div>
+                  </div>
+            
+                  <p class="text-left titles mt-4">A propos de moi</p>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <label class="label1">Titre de section</label>
+                      <input  class="form-control">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <label class="label1">Description</label>
+                      <textarea class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-5">
+                    <a button type="button" class="btn btn-custom text-white" href="" style="color:#3F9FB7;">ok</a>
+               </div>
+              
+                </form>
+            
+                                <br>
+                                <i class="bi bi-gift" style="color:#3F9FB7;">
+                           
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-outline"  style="color:#3F9FB7;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+inviter des membres
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="staticBackdropLabel">inviter des membres</h5>
+
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+
+  <label for="recipient-name" class="col-form-label">Ajoutez des adresses  e-mail:</label>
+  <input type="email" class="form-control form-control-lg" id="form-label" placeholder="nom@exemple.com"aria-label="">
+
+</div>
+<div class="modal-footer ">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+<button type="button" class="btn btn-custom text-white" style="color:#3F9FB7;">Inviter</button>
+</div>
+</div>
+</div>
+</div>
+</i>
+
+
+
+                        <style>
+                           
+                            
+                            a:visited {
+                              color: #3F9FB7;
+                              background-color: transparent;
+                              text-decoration: none;
+                            }
+                            
+                            
+                            </style>
+
+
+
+                                </div>
+                     
+                      <!-- Job Category Listing End -->
+                
+
+                      </div>
+                  
+
+
+
+
+
+
+                  <!-- Right content -->
+                  <div class="bg-light pt-5 testimony-full col-xl-8 col-lg-8 col-md-9">
+                      
+                            
+                                 
+
+
+      
+     
+  
+<style>
+
+      /* styling search bar */
+      .search input[type=text]{
+          width:600px;
+          height:25px;
+          border:20px;
+          border-color: #3F9FB7;
+      }
+           
+      .search{
+          float:center;
+          margin:5px;
+      }
+           
+      .search button{
+          background-color: #3F9FB7;
+          color: #f2f2f2;
+          float: right;
+          padding: 5px 10px;
+          margin-right: 16px;
+          font-size: 12px;
+          border: none;
+          cursor: pointer;
+      }
+
+</style>
+
+<!-- Job Category Listing start -->
+<!-- single one -->
+<div class="single-listing">
+   
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+  <h3>Vidéo répresntatif</h3>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+      <label for="video" class="col-sm-2 col-form-label">Video</label>
+      <input type="text" class="form-control" id="video" name="video" placeholder="URL de la vidéo">
+   
+    </div>
+    <div class="col-md-6">
+      <form action="traitement.php" method="post">
+        <div class="form-group">
+          <label for="title">Titre :</label>
+          <input  class="form-control" id="title" name="title">
+        </div>
+        <div class="form-group">
+          <label for="description">Description :</label>
+          <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+      
+      <div class="container">
+        <div class="col-12">
+          <h3> Publier un espace   </h3>
+          <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+        <div class="col-6 mt-5">
+            <form>
+              <div class="card">
+                <div class="form-group">
+                  <div class="form-group">
+                    <input  placeholder="Titre Offer" class="form-control mt-2">
+                  </div>
+                  <input  placeholder="nombresallee" class="form-control mt-3">
+                  <input  placeholder="localisation " class="form-control mt-3">
+                  <input  placeholder="typeEspace" class="form-control mt-3">
+                  <input  placeholder="avantage" class="form-control mt-3">
+                  <input  placeholder="prix" class="form-control mt-3">
+
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="image">Image</label>
+                  <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" id="card-title"></h5>
+                  <p class="card-text" id="card-description"></p>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Publier</button>
+            </form>
+          
+      </div>
+           
+                  <div class="col-md-6">
+                   
+</div>                    
+                 
+</div>
+        
+          
+        
+  
+        </div>
+        <!-- Features Item -->
+</div></section>
+   
+       
+
+
+    
+ 
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+         
+                            
+                            
+                            
+                            
+                            
+                            
+
+
+
+
+
+                            
+                            
+                                  
+                                      
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+                                  </div>
+                              </div>
+ 
+
+
+

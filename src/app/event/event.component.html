@@ -1,0 +1,763 @@
+<section class="section-hero  inner-page fixed;" style="background:#2474A6;" id="home-section">
+</section>
+<div class="site-wrap">
+
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>  <!-- .site-mobile-menu -->
+
+
+<!-- NAVBAR --> 
+
+
+<header class="site-navbar mt-4">
+    
+
+  <div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="site-logo col-6 "><a href="index.html" ><img src="assets/images/sarra.png" style="width: 100;"alt="" title=""></a></div>
+
+      <nav class="mx-auto site-navigation d-flex aligin-items-center col-7">
+        <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+          <li><a href="c">Profile</a></li>
+          <li><a href="/actualite">Actualité</a></li>
+          <li><a href="offre">offre</a></li>
+          <li><a href="event">Evenement</a></li>
+          <li><a href="cow">Coworking</a></li>
+          <li style="color: #f2f2f2;">{{this.pts}}Px</li>
+
+          <li class="nav-item dropdown">
+            <a class=" nav-icon"  (click)="showNotifications = !showNotifications">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications" [ngClass]="{'show': showNotifications}">
+              <li class="dropdown-header ">
+                Vous avez 4 nouvelles notifications
+                <a href="notification"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4">
+                <div>
+                  <h5 style="color: #2474A6 ;font-size: 19px;">Wevioo</h5>
+                  <p>Un test envoyé par Wevioo vous attent</p>
+                  <p class="small-text">30 min. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr role="tabpanel"class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4 ">
+                <div>
+                  <h5 style="color: #2474A6  ;font-size: 19px;">CareerBridge</h5>
+                  <p>Vous atteint 75 Xp vous pouvez profiter une réduction sur la pack premium</p>
+                  <p class="small-text">1 hr. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="dropdown-footer p-4">
+                <a href="notification">Afficher toutes les notifications</a>
+              </li>
+            </ul>
+          </li>          <li class="nav-item dropdown" style="color: aliceblue;">
+            <div class="nav-link" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-grid-3x3-gap-fill large-icon"></i>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropDown">
+              <a class="dropdown-item" href="#">Pack premium</a>
+              <a class="dropdown-item "style="color: #2474A6;" href="#" >{{this.pts}}Xp</a>
+             
+            </div>
+          </li>
+          <div class=" d-lg-none nav-item dropdown">
+            <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src=" assets/images/person_2.jpg" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu " aria-labelledby="profileDropdown">
+              <a class="dropdown-item " href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item " href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>   
+          
+        </ul>
+      </nav>
+      
+      <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+        <div class="ml-auto">
+        
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src=" assets/images/person_2.jpg" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item" href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+        </div>
+        <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+      </div>
+
+    </div>
+  </div>
+
+
+</header>
+
+
+
+
+
+
+
+
+<body id="top">
+
+
+<section>
+        <!-- Hero Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider section-overly slider-height2 d-flex align-items-center" style="background-image: url('assets/images/event.jpg');" id="home-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-15">
+                         
+                                <div class="mb-5 text-center">
+                                    <h1 class="text-white font-weight-bold">événement</h1>
+                                    <p class="text-light ">La plateforme vous aide à trouver des événements .
+                                        Cela permet de créer des liens et des relations professionnelles
+                                        qui peuvent être bénéfiques pour votre carrière future..</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Hero Area End -->
+        <!-- Job List Area Start -->
+        <div class="job-listing-area pt-120 pb-120 ">
+            <div class="container1 ml-5">
+                <div class="row">
+                    <!-- Left content -->
+                    <div class="col-xl-3 col-lg-3 col-md-4">
+                        <div class="row">
+                            <div class="col-12">
+                                    <div class="small-section-tittle2 mb-45">
+                                    <div class="ion">
+                                    </div>
+                                    <h4>Filtrer </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Job Category Listing start -->
+                        <div class="job-category-listing mb-5 ">
+                            <!-- single one -->
+                            <div class="single-listing">
+                               <div class="small-section-tittle2">
+                                    <!-- <h4>Job Category</h4>-->
+                               </div>
+
+
+                             
+
+ <!-- select-Categories start -->
+ <div class="select-Categorie pt-60 ">
+    <div class="small-section-tittle">
+        <h5>Etablissement</h5>
+    </div>
+
+              <input type="text" class="form-control  form-control" placeholder="Ex:ISAMM" aria-label=""></div>
+
+
+
+
+
+<!-- Select job items start -->
+<div class="select-Categorie pt-60 pb-5">
+   
+    <h5>Localisation</h5>  
+                               
+                                
+                               <select id="inputState" class="form-select form-control">
+                                <option selected>Ville...</option>
+                  <option value="MONASTIR">MONASTIR</option>
+                  <option value="TUNIS">TUNIS</option>
+                  <option value="SOUSSE">SOUSSE</option>
+                  <option value="MAHDIA">MAHDIA</option>
+                  <option value="SFAX">SFAX</option>
+                  <option value="GABES">GABES</option>
+                  <option value="MEDNINE">MEDNINE</option>
+                  <option value="TATAOUINE">TATAOUINE</option>
+                  <option value="KEBILI">KEBILI</option>
+                  <option value="GAFSA">GAFSA</option>
+                  <option value="TOZEUR">TOZEUR</option>
+                  <option value="ARIANA">ARIANA</option>
+                  <option value="BEN AROUS">BEN AROUS</option>
+                  <option value="MANOUBA">MANOUBA</option>
+                  <option value="BEJA">BEJA</option>
+                  <option value="JANDOUBA">JANDOUBA</option>
+                  <option value="EL KEF">EL KEF</option>
+                  <option value="SIDI BOUZID">SIDI BOUZID</option>
+                  <option value="KASSERINE">KASSERINE</option>
+                  <option value="SELIANA">SELIANA</option>
+                  <option value="BIZERTE">BIZERTE</option>
+                  <option value="KAIROUAN">KAIROUAN</option>
+                  <option value="NABEUL">NABEUL</option>
+                  <option value="ZAGHOUAN">ZAGHOUAN</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                  <option value="Tunis">Tunis</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                               
+                               </select>
+                                 <!--  Select job items End-->
+                            
+
+                                 <div class="select-Categorie pt-60 pb-5">
+   
+                                    <h5>Type event</h5>  
+                                                               
+                                                                
+                                                               <select id="inputState" class="form-select form-control">
+                                                                <option selected>Type event</option>
+                                                  <option value="team">Team Building</option>
+                                                  <option value="formation">Formatin</option>
+                                                  <option value="evenement">Evenement</option>
+                                                  <option value="conference">Conférence</option>
+                                                  <option value="soiree">Soirée</option>
+                                                  <option value="action">Action</option>
+                                                  
+                                               
+                                                               
+                                                               </select>
+
+
+ <!-- Select job items start -->
+          
+ <div class="select-Categorie pt-60 pb-5">
+   
+    <h5>Club</h5>  
+                               
+                                
+                               <select id="inputState" class="form-select form-control">
+                                <option selected>Nom de Club</option>
+                  <option value="tunivisions">Tunivisions</option>
+                  <option value="orenda">Orenda</option>
+                  <option value="boubli">Boubli</option>
+                  <option value="rotaract">Rotaract</option>
+                  <option value="culti">Culti Club</option>
+                  <option value="radio">Club Radio</option>
+                  <option value="jeunes">Jeunes Ingénieurs</option>
+                  <option value="robotique">Robotique</option>
+                  <option value="enactus">Enactus</option>
+                
+                               
+                               </select>        
+                             
+                                 <!--  Select job items End-->
+                            
+
+
+
+                               
+
+
+
+                                 
+ <!-- Select job items start -->
+
+ <div class="select-Categorie pt-60 pb-5">
+   
+    <h5>Evenement professionnelles</h5>  
+                               
+                                
+                               <select id="inputState" class="form-select form-control">
+                                <option selected>...</option>
+                  <option value="conférence">conférence </option>
+                  <option value="congres">congrès</option>
+                  <option value="seminaire">séminaire </option>
+                  <option value="salon">salon professionnel</option>
+                  <option value="team-building">team-building</option>
+                  <option value="incentive">L’incentive</option>
+                  <option value=" lancement de produit "> lancement de produit </option>
+                  
+                               
+                               </select>       
+                                  <!--  Select job items End-->
+                                
+                             
+<br>
+
+                                  <div class="d-flex justify-content-center">
+                                    <a button type="button" class="btn btn-custom text-white" href="c" style="color:#2474A6;">recherche</a>
+                               </div>
+ </div>  
+                            </div>
+                           
+ </div>
+
+
+                           
+                                <!-- select-Categories End -->
+                            </div>
+                         
+                            </div>
+                        </div>
+                        <!-- Job Category Listing End -->
+                  
+
+                        </div>
+                    
+
+
+
+
+
+
+                    <!-- Right content -->
+                    <div class="col-xl-6 col-lg-6 col-md-8">
+                        <!-- Featured_job_start -->
+                        <section class="featured-job-area">
+                            <div class="container ">
+                                <!-- Count of Job list Start -->
+                                <div class="row">
+                                    
+                                    <div class="col-lg-12">
+                                       <!-- search bar right align -->
+                   
+
+
+        
+                        <!-- Job Category Listing start -->
+                        <div class="job-category-listing mb-5 ">
+                            <!-- single one -->
+                            <div class="single-listing">
+                              
+
+        <div class="search">
+            
+            <form>
+                <input type="text" placeholder="Rechercher...">
+                <button class="btn btn-custom" style="color:#2474A6,text-whiet" type="submit">Rechercher</button>
+              </form>
+              </div></div>
+        </div>
+    
+<style>
+
+        /* styling search bar */
+        .search input[type=text]{
+            width:600px;
+            height:25px;
+            border:20px;
+            border-color: #0470b7;
+        }
+             
+        .search{
+            float:center;
+            margin:5px;
+        }
+             
+        .search button{
+            background-color: #0074D9;
+            color: #f2f2f2;
+            float: right;
+            padding: 5px 10px;
+            margin-right: 16px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+</style>
+
+
+                               <!-- Job Category Listing start -->
+                               <div class="job-category-listing mb-5 ">
+                                <!-- single one -->
+                                <div class="single-listing">
+                                   
+                                    <!-- ======= Features Section ======= -->
+                                    <section id="features" class="features">
+                                  
+                                      <div class="container">
+                                        
+                                        <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+                                
+                                          <div class="col-md-12">
+                                            <a href="#"><img src="assets/images/cow2.png" class="img-fluid rounded-circle " style="width:60px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary">Boubli
+                                            </label><div class="d-flex flex-row align-items-center mb-2">
+                                              <p class="mb-0 me-2 text-secondary">ISAMM</p>
+                                              
+                                            </div>
+                                            <p  style="font-size: small;">"The Launch Event” est notre tout premier événement, qui sera tenu spécialement pour promouvoir le lancement de notre club mais pour aussi discuter de la scène de la création de contenu en Tunisie avec la présence de grands créateurs de contenu réputés.
+                              
+                                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                              <div class="carousel-inner">
+                                                <div class="carousel-item active" data-bs-interval="10000">
+                                                  <img src="assets/images/boubli.png" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item" data-bs-interval="2000">
+                                                  <img src="assets/images/e.png" class="d-block w-100" alt="...">
+                                                </div>
+                                                
+                                              </div>
+                                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                              </button>
+                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-footer justify-content-center">
+                                                <a input type="bouton" style="font-size:15px;font-weight:500;color:#2474A6;"href="detailcow" type="button">Participer</a>
+                                              </div>
+                                          </div>
+                                         
+                                        </div><!-- Features Item -->
+                                </div></section>
+                                   
+                                       
+                              
+                                    
+                                      
+                                        </div></div></div>
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                               
+                                                                  </div>
+                                                              </div>
+                                                           
+                                                             
+                                                           <!-- Job Category Listing start -->
+                            <div class="job-category-listing mb-5 ">
+                                <!-- single one -->
+                                <div class="single-listing">
+                                   
+                                    <!-- ======= Features Section ======= -->
+                                    <section id="features" class="features">
+                                  
+                                      <div class="container">
+                                        
+                                        <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+                                
+                                          <div class="col-md-12">
+                                            <a href="#"><img src="assets/images/j.png" class="img-fluid rounded-circle " style="width:60px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary">Jeunes Ingénieurs
+                                            </label><div class="d-flex flex-row align-items-center mb-2">
+                                              <p class="mb-0 me-2 text-secondary">ISAMM </p>
+                                              
+                                            </div>
+                                            <p  style="font-size: small;">L'événement L'AMI, TJI-META,est consacré à la découverte des dernières évolutions et innovations
+                                                de le métavers appliquée aux assurances .Relevez le défi et tentez de gagner des prix !
+                              
+                                            <div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
+                                              <div class="carousel-inner">
+                                                <div class="carousel-item active" data-bs-interval="10000">
+                                                  <img src="assets/images/ami.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                                <div class="carousel-item" data-bs-interval="2000">
+                                                  <img src="assets/images/ami1.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                                
+                                              </div>
+                                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                              </button>
+                                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-footer justify-content-center">
+                                                <a input type="bouton" style="font-size:15px;font-weight:500;color:#2474A6;"href="detailcow" type="button">Participer</a>
+                                              </div>
+                                          </div>
+                                         
+                                        </div><!-- Features Item -->
+                                </div></section>
+                                   
+                                   
+                                       
+                              
+                                    
+                                       
+                                        </div></div>
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                                                              
+                                                           
+                                                 
+                              
+                              
+                              
+                              
+                                                              
+                                                              
+                                                                       
+                                                              
+                                                              
+                             
+                              
+                              
+                              
+                              
+                              
+                                                              
+                                                           
+                                                          
+                                                      </section>
+                                                      <!-- Featured_job_end -->
+                                                    
+                                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                                <!-- Left content -->
+                                                <div class="col-xl-3 col-lg-3 col-md-4 ">
+                                                    
+                                                    <!-- Job Category Listing start -->
+                                                        <!-- single one -->
+                                                        <div class="single-listing">
+                                                          
+                                                            <!-- Select job items start -->
+                                                            <div class="select-job-items2">
+                                                                <img src="assets/images/ooredoo.jpg">
+                                                            </div>
+                                                           
+                                                            <!--  Select job items End-->
+                                                            <!-- select-Categories start -->
+                                                                <div class="small-section-tittle2">
+                                                                    <h4>vue récente
+                                                                    </h4>
+                                                                </div>
+                                                                <label class="container text-secondary " style="font-size:15px">Emplois dans le monde
+                                                                   
+                                                                </label>
+                                                                <label class="container "style="font-size:15px">UI/UX Designer
+                                                                
+                                                                </label><br>
+                                                                <label class="container text-secondary "style="font-size:15px">AgencyAnalytics
+                                                                    
+                                                                </label>
+                                                                <label class="container "style="font-size:15px">Frontend Developer (Website)
+                                                                
+                                                                </label>
+                            
+                            
+                                                                <br>
+                                                                <label class="container text-secondary "style="font-size:15px">Clevertech
+                                                                    
+                                                                </label>
+                                                                <label class="container "style="font-size:15px">Senior Staff React Developer
+                                                                
+                                                                </label>
+                                                                <h4>Meilleurs Clubs
+                                                                </h4>
+                                                               
+                                                            
+                                                                <a href="#"><img src="assets/images/t.png" class="img-fluid rounded-circle " style="width:50px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary">Tunivisions
+                                                                
+                                                                </label><br>
+                                                                <a href="#"><img src="assets/images/j.png" class="img-fluid rounded-circle " style="width:50px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary">Jeunes Ingénieur
+                                                                
+                                                                </label>
+                                                            
+                                            
+                                                            <!-- Hero Area End -->
+                                    <!-- Job List Area Start -->
+                                    <div class="job-listing-area pt-60 pb-60 ">
+                                        <div class="container1 ">
+                                            <div class="row">
+                                                <!-- Left content -->
+                                                <div class="col-xl-12 col-lg-12 col-md-4">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                               
+                                                        </div>
+                                                    </div>
+                                                    <!-- Job Category Listing start -->
+                                                    <div class="job-category-listing mb-5 ">
+                                                        <!-- single one -->
+                                                        <div class="single-listing">
+                                                           <div class="small-section-tittle2">
+                                                                <!-- <h4>Job Category</h4>-->
+                                                           </div>
+                            
+                            
+                                                            <!-- select-Categories start -->
+                                                            <div class="select-Categories pt-20 pb-50">
+                                                               
+                                                                <h5 style="font-style:Mulish;font-size:24px; color:#2474A6">vous peut aimer</h5> 
+                                                                <br>  <br> 
+                                                                
+                                                                <a href="#"><img src="assets/images/cow2.png" class="img-fluid center" style="width:60px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary">LaunchPad<br>
+                                                                    <label class="text-secondary"> Annonceur</label><br>
+                                                                   
+                                                                </label><br><br>
+                                                                <div class="d-flex justify-content-center">
+                                                                    <a button type="button" class="btn btn-custom text-white" href="c" style="color:#2474A6;">Suivre</a>
+                                                               </div><br>
+                                                                <a href="#"><img src="assets/images/cow1.png" class="img-fluid  " style="width:60px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary"> Collaborate & Create<br>
+                                                                    <label class="text-secondary">Annonceur</label><br>
+                                                                </label><br><br>
+                                                                <div class="d-flex justify-content-center">
+                                                                    <a button type="button" class="btn btn-custom text-white" href="c" style="color:#2474A6;">Suivre</a>
+                                                               </div><br>
+                            
+                            
+                                
+                            
+                            
+                            
+                            
+                                                        
+                                                             <!--  Select job items End-->
+                                                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                                           
+                            
+                            
+                            
+                                                             
+                            
+                                                            
+                                                         
+                            
+                            
+                             </div>  
+                                                        </div>
+                                                       
+                             </div>
+                            
+                            
+                                                       
+                                                            <!-- select-Categories End -->
+                                                        </div>
+                                                     
+                                                        </div>
+                                                    </div>
+                                                    <!-- Job Category Listing End -->
+                                              
+                            
+                                                    </div>
+                                                
+                            
+                            
+                                                            <!-- select-Categories End -->
+                                                       
+                                                        <!-- single two -->
+                                                    
+                                                            <!--  Select job items End-->
+                                                            <!-- select-Categories start -->
+                                                          
+                                                            <!-- select-Categories End -->
+                                                        <!-- single three -->
+                                                     
+                                                            <!-- select-Categories End -->
+                                                        
+                                                          <!-- Range Slider End -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- Job Category Listing End -->
+                                                </div>
+                                            </div>
+                                                </div> 
+                                   
+                                    
+                                    <!-- Job List Area End -->
+                                    <!--Pagination Start  -->
+                                    <div class="pagination-area pb-115 text-center">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div class="single-wrap d-flex justify-content-center">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination justify-content-start">
+                                                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                                                <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#"><span class="ti-angle-right"></span></a></li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pagination End  -->
+                                    
+                               
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                    
+                            
+                            

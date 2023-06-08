@@ -1,0 +1,148 @@
+<section class="section-hero  inner-page fixed;" style="background:#2474A6;" id="home-section">
+</section>
+<div class="site-wrap">
+
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>  <!-- .site-mobile-menu -->
+
+
+<!-- NAVBAR --> 
+
+
+<header class="site-navbar mt-4">
+    
+
+  <div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="site-logo col-6 "><a href="index.html" ><img src="assets/images/sarra.png" style="width: 100;"alt="" title=""></a></div>
+
+      <nav class="mx-auto site-navigation d-flex aligin-items-center col-7">
+        <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+         
+          <li><a href="/actualite">Actualité</a></li>
+
+          <li><a href="offre">offre</a></li>
+          <li><a href="event">Evenement</a></li>
+          <li><a href="cow">Coworking</a></li>
+          <li style="color: #f2f2f2;">20Px</li>
+          <li class="nav-item dropdown">
+            <a class=" nav-icon"  (click)="showNotifications = !showNotifications">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications" [ngClass]="{'show': showNotifications}">
+              <li class="dropdown-header ">
+                Vous avez 4 nouvelles notifications
+                <a href="notification"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4">
+                <div>
+                  <h5 style="color: #2474A6 ;font-size: 19px;">Wevioo</h5>
+                  <p>Un test envoyé par Wevioo vous attent</p>
+                  <p class="small-text">30 min. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr role="tabpanel"class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4 ">
+                <div>
+                  <h5 style="color: #2474A6  ;font-size: 19px;">CareerBridge</h5>
+                  <p>Vous atteint 75 Xp vous pouvez profiter une réduction sur la pack premium</p>
+                  <p class="small-text">1 hr. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="dropdown-footer p-4">
+                <a href="notification">Afficher toutes les notifications</a>
+              </li>
+            </ul>
+          </li>            <li class="nav-item dropdown" style="color: aliceblue;">
+            <div class="nav-link" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-grid-3x3-gap-fill large-icon"></i>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropDown">
+              <a class="dropdown-item" href="premieumc">Pack premium</a>
+              <a class="dropdown-item "style="color: #2474A6;" href="#" >1Xp</a>
+             
+            </div>
+          </li>
+          <div class=" d-lg-none nav-item dropdown">
+            <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src=" assets/images/person_2.jpg" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu " aria-labelledby="profileDropdown">
+              <a class="dropdown-item " href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item " href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>   
+          
+        </ul>
+      </nav>
+      
+      <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+        <div class="ml-auto">
+        
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src=" assets/images/person_2.jpg" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item" href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+        </div>
+        <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+      </div>
+
+    </div>
+  </div>
+
+
+</header>
+
+
+<body>
+    <div class="card">
+        <div class="title mt-2">
+            <h1>Paramètre</h1>
+        </div>
+       
+        <div class="mt-4">
+            <div class="card">
+                <h2>Carte 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+              </div>
+              <div class="card">
+                <h2>Carte 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+              </div>
+              <div class="card">
+                <h2>Carte 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.</p>
+              </div>
+
+        </div>
+    </div>
+
+</body>

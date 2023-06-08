@@ -1,0 +1,268 @@
+<section class="section-hero  inner-page fixed;" style="background: linear-gradient(120deg,#020505, #033e8c);" id="home-section">
+</section>
+<div class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div> 
+  <header class="site-navbar mt-4">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="site-logo col-6 "><a href="index.html"><img src="../../assets/img/SkillPro.png" style="width: 100;border-radius: 50%;" alt=""
+              title=""></a></div>
+
+        <nav class="mx-auto site-navigation d-flex aligin-items-center col-5">
+          <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+            <li><a href="/c">Profile</a></li>
+            <li><a href="offre">offre</a></li>
+           
+            <div class=" d-lg-none nav-item dropdown">
+              <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="{{candidate.logo}}" class="img-fluid rounded-circle " style="width: 40px;">
+                <!-- icône de profil -->
+              </div>
+              <div class="dropdown-menu " aria-labelledby="profileDropdown">
+                <a class="dropdown-item " href="c">Profile</a> <!-- lien vers les paramètres -->
+                <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+                <a href class="dropdown-item " (click)="logout()">Déconnexion</a> <!-- lien de déconnexion -->
+              </div>
+            </div>
+
+          </ul>
+        </nav>
+
+        <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+          <div class="ml-auto">
+
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="{{candidate.logo}}" class="img-fluid rounded-circle " style="width: 40px;">
+              <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a href class="dropdown-item " (click)="logout()">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>
+          <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
+              class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+        </div>
+
+      </div>
+    </div>
+
+
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <body id="top">
+
+    <body>
+
+
+      <main>
+
+        <section>
+          <!-- Hero Area Start-->
+          <div class="slider-area ">
+            <div class="single-slider section-overly slider-height2 d-flex align-items-center"
+              style="background-image: url('assets/images/7.jpg');" id="home-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-15">
+
+                    <div class="mb-5 text-center">
+                      <h1 class="text-white font-weight-bold">Offre</h1>
+                      <p class="text-light ">Élargissez votre champ d'action en rencontrant des professionnels de votre
+                        domaine et en explorant de nouvelles possibilités.</p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="job-post-company pt-120 pb-120">
+          <div class="container">
+            <div class="row justify-content-between">
+              <!-- Left Content -->
+              <style>
+                body {
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width:1000px;
+            max-width: 400px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            height: 420px;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .card h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 20px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+        }
+
+        .card .section-tittle {
+            margin-bottom: 30px;
+        }
+
+        .card .section-tittle h5 {
+            color: #2474A6;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .post-details3 {
+            position: relative;
+        }
+            </style>
+        
+        
+        <body>
+            <div class="card" >
+                <img src="{{offer.logo}}" alt="Company Logo">
+                <h1>{{offer.title}}</h1>
+                <ul>
+                    <li><i class="bi bi-geo-alt"></i> {{offer.localisation}}</li>
+                </ul>
+                <div class="section-tittle">
+                    <h5>Description d'offre</h5>
+                </div>
+                <p>{{offer.description}}</p>
+                <button type="button" class="btn btn-custom text-white" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal" data-bs-whatever="@mdo" (click)="openChatSession()">Communiquer </button>
+               
+            </div>
+              <!-- Right Content -->
+              <div class="col-xl-4 col-lg-4">
+                <div class="post-details3  mb-50" >
+                  <!-- Small Section Tittle -->
+                  <div class="small-section-tittle">
+                    <h4 style="color: #2474A6;">Aperçu d'offre
+                    </h4>
+                  </div>
+                  <ul>
+                    <li>Date de publication : <span>{{offer.publication_date ?? '-' }}</span></li>
+                    <li>localisation: <span>{{ offer.localisation ?? '-' }}</span></li>
+                    <li>Prix : <span>{{offer.salaire ?? '-' }}dt</span></li>
+                  </ul>
+
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-custom text-white" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal" data-bs-whatever="@mdo">Envoyer la demande</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Réservation </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <form class="form-horizontal" name="formOfferRegistration" (ngSubmit)="postulateOffer(f)"
+                            #f="ngForm" novalidate>
+                            <div class="modal-body">
+                              <div *ngIf="showForm">
+                                <h4 style="color: #2474A6;" class="condidat"> Demande </h4>
+                                <label>Lien de votre profile</label>
+                                <input type="text" class="form-control form-control-lg" name="portfolioLink"
+                                  placeholder="https://exemple.com" aria-label=""
+                                  [(ngModel)]="formOfferRegistration.portfolioLink" required #portfolioLink="ngModel">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="field">
+                                      <label>CV</label>
+                                      <ngx-awesome-uploader [captions]="captions" [uploadType]="'single'"
+                                        [adapter]="adapter" [enableCropper]="false" (uploadSuccess)="uploadCV($event)">
+                                      </ngx-awesome-uploader>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="field">
+                                      <label>Demande</label>
+                                      <ngx-awesome-uploader [captions]="caption" [uploadType]="'single'"
+                                        [adapter]="adapter" [enableCropper]="false"
+                                        (uploadSuccess)="uploadLetter($event)">
+                                      </ngx-awesome-uploader>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                              <button class="btn btn-custom text-white" data-bs-dismiss="modal" style="color:#2474A6;"
+                                type="submit">Envoyer</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </body>
+            </div>
+            
+          </div>
+        </div>
+        <!-- job post company End -->
+
+      </main>
+      <app-footer></app-footer>

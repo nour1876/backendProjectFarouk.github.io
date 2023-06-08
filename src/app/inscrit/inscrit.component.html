@@ -1,0 +1,503 @@
+<app-head></app-head>
+  <section id="schedule" class="section-with-bg">
+    <div class="card">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header ">
+        <h2>INSCRIVEZ-VOUS</h2>
+      </div>
+      <ul class="nav nav-tabs" role="tablist" data-aos="fade-up">
+        <li class="nav-item">
+          <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Client</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Fournisseur de services</a>
+        </li>
+      </ul>
+      <p class="sub-heading">Veuillez compléter votre inscription.</p>
+      <div class="tab-content row justify-content-center">
+
+        <!-- c -->
+        <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+          <form class="form-horizontal" *ngIf="!isCandidateSuccessful" name="form"
+            (ngSubmit)="f.form.valid && onSubmitCandidate()" #f="ngForm" novalidate>
+            <div class="row schedule-item">
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example17">Nom et prénom</label>
+                <input type="text" class="form-control  form-control-lg" name="username" placeholder="Nom et prénom"
+                  aria-label="" [(ngModel)]="form.username" required #username="ngModel">
+              </div>
+              <div class="col-md-6">
+                <label for="form-label" for="form2Example17">Adresse E-mail</label>
+                <input type="email" class="form-control form-control-lg" name="email" id="form-label"
+                  placeholder="nom@exemple.com" aria-label="" [(ngModel)]="form.email" required email #email="ngModel">
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example17">Telephone Mobile </label>
+                <input type="text" class="form-control  form-control-lg" name="phoneNumber" placeholder="+216"
+                  aria-label="" [(ngModel)]="form.phoneNumber" #phoneNumber="ngModel">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example27">Statut</label>
+                <select id="inputState" class="form-select form-control-lg" [(ngModel)]="form.status" #status="ngModel"
+                  name="status">
+                  <option>CANDIDAT</option>
+                  <option>FREELANCER</option>
+                  <option>DIPLOME</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-6"> <label class="form-label" for="form2Example17">Ville</label>
+                <select id="inputState" class="form-select form-control-lg" [(ngModel)]="form.city" #ville="ngModel"
+                  name="city">
+                  <option selected>Ville...</option>
+                  <option value="MONASTIR">MONASTIR</option>
+                  <option value="TUNIS">TUNIS</option>
+                  <option value="SOUSSE">SOUSSE</option>
+                  <option value="MAHDIA">MAHDIA</option>
+                  <option value="SFAX">SFAX</option>
+                  <option value="GABES">GABES</option>
+                  <option value="MEDNINE">MEDNINE</option>
+                  <option value="TATAOUINE">TATAOUINE</option>
+                  <option value="KEBILI">KEBILI</option>
+                  <option value="GAFSA">GAFSA</option>
+                  <option value="TOZEUR">TOZEUR</option>
+                  <option value="ARIANA">ARIANA</option>
+                  <option value="BEN AROUS">BEN AROUS</option>
+                  <option value="MANOUBA">MANOUBA</option>
+                  <option value="BEJA">BEJA</option>
+                  <option value="JANDOUBA">JANDOUBA</option>
+                  <option value="EL KEF">EL KEF</option>
+                  <option value="SIDI BOUZID">SIDI BOUZID</option>
+                  <option value="KASSERINE">KASSERINE</option>
+                  <option value="SELIANA">SELIANA</option>
+                  <option value="BIZERTE">BIZERTE</option>
+                  <option value="KAIROUAN">KAIROUAN</option>
+                  <option value="NABEUL">NABEUL</option>
+                  <option value="ZAGHOUAN">ZAGHOUAN</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                  <option value="Tunis">Tunis</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example27">Adresse</label>
+                <input type="text" class="form-control form-control-lg" id="inputAddress"
+                  placeholder="Tech.Ghazela.Ariana" [(ngModel)]="form.address" #address="ngModel" name="address">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="field">
+                  <label>Photo</label>
+                  <ngx-awesome-uploader [captions]="captions" [uploadType]="'single'" [adapter]="adapter"
+                    [enableCropper]="false" (uploadSuccess)="uploadSuccess($event)">
+                  </ngx-awesome-uploader>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <label class="form-label">Code</label>
+                <input type="text" class="form-control form-control-lg" [(ngModel)]="code" #codeInput="ngModel"
+                  name="code">
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-6">
+                <label for="floatingPassword">Créer Mot de passe</label>
+                <input type="password" class="form-control form-control-lg" id="floatingPassword"
+                  placeholder=" Mot de passe" name="password" [(ngModel)]="form.password" required minlength="6"
+                  #password="ngModel">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example27">Comfirmer </label>
+                <input type="password" id="form2Example27" class="form-control form-control-lg"
+                  placeholder=" Mot de passe" name="confirmedPassword" [(ngModel)]="form.confirmedPassword" required
+                  minlength="6" #confirmedPassword="ngModel" />
+              </div>
+              <div class="col-md-4  "></div>
+              <div class="col-md-4 mt-3 ">
+                <!-- <a class="btn btn-info btn-lg btn-block text-white" href="c" type="button">Connexion</a> -->
+                <button class="btn btn-info btn-lg btn-block text-white" type="submit">Sign Up</button>
+              </div>
+              <hr class="my-4">
+              <div class="alert alert-warning" *ngIf="f.submitted && isCandidateSignUpFailed">
+                Signup failed!<br />{{ errorMessage }}
+              </div>
+              <div class="col-md-2 "></div>
+              <div class="col-md-4 "></div>
+              <p class="col-md-5 mt-3  " style="color: #1b1c1e;">Tu as déja un compte ? <a href="/login"
+                  style="color: #011d41;">Se Connecter</a>
+              </p>
+            </div>
+          </form>
+          <div class="alert alert-success" *ngIf="isCandidateSuccessful">
+            Your candidate registration is successful !
+          </div>
+        </div>
+      
+        <!-- c-->
+
+        <!-- r -->
+        <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+          <form class="form-horizontal" *ngIf="!isRecruiterSuccessful" name="form"
+            (ngSubmit)="f.form.valid && onSubmitRecruiter()" #f="ngForm" novalidate>
+            <div class="row schedule-item">
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example17">Nom Entreprise</label>
+                <input type="text" class="form-control  form-control-lg" placeholder="Nom Entreprise" aria-label=""
+                  name="companyName" [(ngModel)]="form.companyName" #companyName="ngModel">
+              </div>
+              <div class="col-md-6">
+                <label for="form-label" for="form2Example17">Adresse E-mail</label>
+                <input type="email" class="form-control form-control-lg" id="form-label" placeholder="nom@exemple.com"
+                  aria-label="" name="email" [(ngModel)]="form.email" #email="ngModel">
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example17">Activité de l'entreprise</label>
+                <textarea type="text" class="form-control-lg" cols="32" id="form-label" maxlength="355"
+                  name="description" placeholder="Activité de l'entreprise" name="companyActivity"
+                  [(ngModel)]="form.companyActivity" #email="ngModel"></textarea>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example27">Domaine d'activité</label>
+                <select id="inputState" class="form-select form-control-lg" [(ngModel)]="form.activityDomain"
+                  #activityDomain="ngModel" name="activityDomain">
+                  <option value="Agriculture, Peche, Production animale">Agriculture, Pêche, Production animale</option>
+                  <option value="Agroalimentaire">Agroalimentaire </option>
+                  <option value="ONG">ONG</option>
+                  <option value="Architecture, Genie civil, Batiment, Hydraulique">Architecture, Génie civil, Bâtiment,
+                    Hydraulique</option>
+                  <option value="Biologie, pharmacie">Biologie, pharmacie </option>
+                  <option value="Bois, Ameublement">Bois, Ameublement</option>
+                  <option value="Commerce,  Vente, Publicite, Marketing">Commerce, Vente, Publicité, Marketing</option>
+                  <option value="Comptabilite, Audit, conseil">Comptabilité, Audit, conseil</option>
+                  <option value="Culture, Spectacles, Mode, Beaux arts">Culture, Spectacles, Mode, Beaux arts</option>
+                  <option value="Droit, Juridique">Droit, Juridique</option>
+                  <option value="Economie, Gestion, Finances">Economie, Gestion, Finances</option>
+                  <option value="Edition, Arts et graphiques">Edition, Arts et graphiques</option>
+                  <option value="Energetique, Génie industriel">Energétique, Génie industriel</option>
+                  <option value="Informatique, Telecom, Multimedia">Informatique, Télécom, Multimedia</option>
+                  <option value="Langues, Traduction, Lettres">Langues, Traduction, Lettres</option>
+                  <option value="Mathematiques,  Statistiques">Mathématiques, Statistiques</option>
+                  <option value="Mecanique, Maintenance, Soudure, Mécatronique">Mécanique, Maintenance, Soudure,
+                    Mécatronique</option>
+                  <option value="Medias, Audiovisuel, Communication, Documentation">Médias, Audiovisuel, Communication,
+                    Documentation</option>
+                  <option value="Sante : Medical, Paramedical, Veterinaire, Hygiene">Santé : Médical, Paramédical,
+                    Vétérinaire, Hygiène</option>
+                  <option value="Sciences : Geologie, Physique, Chimie ">Sciences : Géologie, Physique, Chimie </option>
+                  <option value="Textile-Habillement">Textile-Habillement</option>
+                  <option value="Teleoperateurs, Telemarketing, Televente">Téléopérateurs, Télémarketing, Télévente
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-6"> <label class="form-label" for="form2Example17">Ville</label>
+                <select id="inputState" class="form-select form-control-lg" [(ngModel)]="form.city" #city="ngModel"
+                  name="city">
+                  <option selected>Ville...</option>
+                  <option value="MONASTIR">MONASTIR</option>
+                  <option value="TUNIS">TUNIS</option>
+                  <option value="SOUSSE">SOUSSE</option>
+                  <option value="MAHDIA">MAHDIA</option>
+                  <option value="SFAX">SFAX</option>
+                  <option value="GABES">GABES</option>
+                  <option value="MEDNINE">MEDNINE</option>
+                  <option value="TATAOUINE">TATAOUINE</option>
+                  <option value="KEBILI">KEBILI</option>
+                  <option value="GAFSA">GAFSA</option>
+                  <option value="TOZEUR">TOZEUR</option>
+                  <option value="ARIANA">ARIANA</option>
+                  <option value="BEN AROUS">BEN AROUS</option>
+                  <option value="MANOUBA">MANOUBA</option>
+                  <option value="BEJA">BEJA</option>
+                  <option value="JANDOUBA">JANDOUBA</option>
+                  <option value="EL KEF">EL KEF</option>
+                  <option value="SIDI BOUZID">SIDI BOUZID</option>
+                  <option value="KASSERINE">KASSERINE</option>
+                  <option value="SELIANA">SELIANA</option>
+                  <option value="BIZERTE">BIZERTE</option>
+                  <option value="KAIROUAN">KAIROUAN</option>
+                  <option value="NABEUL">NABEUL</option>
+                  <option value="ZAGHOUAN">ZAGHOUAN</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                  <option value="Tunis">Tunis</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                  <option value="Medjez elbeb">Medjez elbeb</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example27">Adresse</label>
+                <input type="text" class="form-control form-control-lg" id="inputAddress"
+                  placeholder="Tech.Ghazela.Ariana" [(ngModel)]="form.address" #address="ngModel" name="address">
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example17">Nom et prénom représentant</label>
+                <input type="text" class="form-control  form-control-lg" placeholder="Nom et prénom représentant"
+                  aria-label="" [(ngModel)]="form.usernameRepresentative" #usernameRepresentative="ngModel"
+                  name="usernameRepresentative">
+              </div>
+              <div class="col-md-6">
+                <label for="form-label" for="form2Example17">Taille de l’entreprise</label>
+                <input type="number" class="form-control form-control-lg" id="form-label"
+                  placeholder="Taille de l’entreprise" aria-label="" [(ngModel)]="form.companySize"
+                  #companySize="ngModel" name="companySize">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="field">
+                  <label>Photo</label>
+                  <ngx-awesome-uploader [captions]="captions" [uploadType]="'single'" [adapter]="adapter"
+                    [enableCropper]="false" (uploadSuccess)="uploadSuccess($event)">
+                  </ngx-awesome-uploader>
+                </div>
+              </div>
+            </div>
+            <div class="row schedule-item">
+              <div class="col-md-6">
+                <label for="floatingPassword">Créer Mot de passe</label>
+                <input type="password" class="form-control form-control-lg" id="floatingPassword"
+                  placeholder=" Mot de passe" name="password" [(ngModel)]="form.password" required minlength="6"
+                  #password="ngModel">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="form2Example27">Comfirmer </label>
+                <input type="password" id="form2Example27" class="form-control form-control-lg"
+                  placeholder=" Mot de passe" name="confirmedPassword" [(ngModel)]="form.confirmedPassword" required
+                  minlength="6" #confirmedPassword="ngModel" />
+              </div>
+              <div class="col-md-4  "></div>
+              <div class="col-md-4 mt-3 ">
+                <button class="btn btn-info btn-lg btn-block text-white" type="submit">Sign Up</button>
+              </div>
+              <hr class="my-4">
+              <div class="alert alert-warning" *ngIf="f.submitted && isRecruiterSignUpFailed">
+                Signup failed!<br />{{ errorMessage }}
+              </div>
+              <div class="col-md-2 "></div>
+              <div class="col-md-4 "></div>
+              <p class="col-md-5 mt-3  " style="color: #1b1c1e;">Tu as déja un compte ? <a href="/login"
+                  style="color: #033e8c;">Se Connecter</a>
+              </p>
+            </div>
+          </form>
+          <div class="alert alert-success" *ngIf="isRecruiterSuccessful">
+            Your Recruiter registration is successful !
+          </div>
+        </div>
+        <!-- r -->
+
+        <!-- club -->
+        <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+
+          <div class="row schedule-item">
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">Nom de club</label>
+              <input type="text" class="form-control  form-control-lg" placeholder="Nom de club" aria-label="">
+            </div>
+            <div class="col-md-6">
+              <label for="form-label" for="form2Example17">Adresse E-mail</label>
+              <input type="email" class="form-control form-control-lg" id="form-label" placeholder="nom@exemple.com"
+                aria-label="">
+
+            </div>
+          </div>
+          <div class="row schedule-item">
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">Nom et prénom représentant </label>
+              <input type="text" class="form-control  form-control-lg" placeholder="Nom et prénom représentant"
+                aria-label="">
+            </div>
+
+
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">université </label>
+              <input type="text" class="form-control  form-control-lg" placeholder="université" aria-label="">
+            </div>
+          </div>
+          <div class="row schedule-item">
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">Activité de club</label>
+              <textarea type="text" class="form-control-lg" cols="32" id="form-label" maxlength="355" name="description"
+                placeholder="Activité de club"></textarea>
+            </div>
+
+
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">Telephone Mobile </label>
+              <input type="text" class="form-control  form-control-lg" placeholder="+216" aria-label="">
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-13">
+            <label class="form-label" for="form2Example27">Logo</label>
+            <input class="form-control form-control-lg" type="file" id="formFile">
+          </div>
+
+
+
+
+          <div class="row schedule-item">
+            <div class="col-md-6">
+              <label for="floatingPassword">Créer Mot de passe</label>
+              <input type="password" class="form-control form-control-lg" id="floatingPassword"
+                placeholder=" Mot de passe">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example27">Comfirmer </label>
+              <input type="password" id="form2Example27" class="form-control form-control-lg"
+                placeholder=" Mot de passe" />
+            </div>
+            <div class="col-md-4  "> </div>
+            <div class="col-md-4 mt-3 ">
+              <a class="btn btn-info btn-lg btn-block text-white" href="club" type="button">Connexion</a>
+
+            </div>
+
+            <div class="col-md-2 ">
+            </div>
+            <div class="col-md-4 ">
+            </div>
+            <p class="col-md-5 mt-3  " style="color: #1b1c1e;">Tu as déja un compte ? <a href="/login"
+                style="color: #033e8c;">Se Connecter</a></p>
+
+
+          </div>
+        </div>
+
+
+        <!-- end p -->
+        <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-4">
+
+          <div class="row schedule-item">
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">Nom et prénom</label>
+              <input type="text" class="form-control  form-control-lg" placeholder="Nom Entreprise" aria-label="">
+            </div>
+            <div class="col-md-6">
+              <label for="form-label" for="form2Example17">Adresse E-mail</label>
+              <input type="email" class="form-control form-control-lg" id="form-label" placeholder="nom@exemple.com"
+                aria-label="">
+
+            </div>
+          </div>
+
+          <div class="row schedule-item">
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">Nom de l’espace</label>
+              <input type="text" class="form-control  form-control-lg" placeholder="Nom de l’espace" aria-label="">
+            </div>
+            <div class="col-md-6">
+              <label for="form-label" for="form2Example17">Type d’espaces</label>
+              <input type="email" class="form-control form-control-lg" id="form-label" placeholder="Type d’espaces"
+                aria-label="">
+
+            </div>
+          </div>
+
+
+          <div class="row schedule-item">
+            <div class="col-md-6"> <label class="form-label" for="form2Example17">Ville</label>
+              <select id="inputState" class="form-select form-control-lg">
+                <option selected>Ville...</option>
+                <option value="MONASTIR">MONASTIR</option>
+                <option value="TUNIS">TUNIS</option>
+                <option value="SOUSSE">SOUSSE</option>
+                <option value="MAHDIA">MAHDIA</option>
+                <option value="SFAX">SFAX</option>
+                <option value="GABES">GABES</option>
+                <option value="MEDNINE">MEDNINE</option>
+                <option value="TATAOUINE">TATAOUINE</option>
+                <option value="KEBILI">KEBILI</option>
+                <option value="GAFSA">GAFSA</option>
+                <option value="TOZEUR">TOZEUR</option>
+                <option value="ARIANA">ARIANA</option>
+                <option value="BEN AROUS">BEN AROUS</option>
+                <option value="MANOUBA">MANOUBA</option>
+                <option value="BEJA">BEJA</option>
+                <option value="JANDOUBA">JANDOUBA</option>
+                <option value="EL KEF">EL KEF</option>
+                <option value="SIDI BOUZID">SIDI BOUZID</option>
+                <option value="KASSERINE">KASSERINE</option>
+                <option value="SELIANA">SELIANA</option>
+                <option value="BIZERTE">BIZERTE</option>
+                <option value="KAIROUAN">KAIROUAN</option>
+                <option value="NABEUL">NABEUL</option>
+                <option value="ZAGHOUAN">ZAGHOUAN</option>
+                <option value="Medjez elbeb">Medjez elbeb</option>
+                <option value="Tunis">Tunis</option>
+                <option value="Medjez elbeb">Medjez elbeb</option>
+                <option value="Medjez elbeb">Medjez elbeb</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example17">Telephone Mobile </label>
+              <input type="text" class="form-control  form-control-lg" placeholder="+216" aria-label="">
+            </div>
+          </div>
+          <div class="col-md-13">
+            <label class="form-label" for="form2Example27">Logo</label>
+            <input class="form-control form-control-lg" type="file" id="formFile">
+          </div>
+          <div class="row schedule-item">
+            <div class="col-md-6">
+              <label for="floatingPassword">Créer Mot de passe</label>
+              <input type="password" class="form-control form-control-lg" id="floatingPassword"
+                placeholder=" Mot de passe">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="form2Example27">Comfirmer </label>
+              <input type="password" id="form2Example27" class="form-control form-control-lg"
+                placeholder=" Mot de passe" />
+            </div>
+            <div class="col-md-4  "> </div>
+            <div class="col-md-4 mt-3 ">
+              <a class="btn btn-info btn-lg btn-block text-white" href="propritaire" type="button">Connexion</a>
+
+            </div>
+
+            <div class="col-md-2 ">
+            </div>
+            <div class="col-md-4 ">
+            </div>
+            <div style="display: flex; justify-content: flex-start;">
+              <p class="col-md-5 mt-3" style="color: #1b1c1e;">Tu as déjà un compte ? <a href="/login" style="color: #033e8c;">Se Connecter</a></p>
+            </div>
+            
+            
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+      </div>
+      <!-- p -->
+
+    </div>
+
+
+
+  </section><!-- End Schedule Section -->
+  <app-footer></app-footer>

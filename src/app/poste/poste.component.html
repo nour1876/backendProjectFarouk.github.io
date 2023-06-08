@@ -1,0 +1,28 @@
+<app-head></app-head>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Projects</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let project of projects">
+        <div class="card h-100">
+          <img src="{{ project.imageUrl }}" class="card-img-top" alt="Project Image" style="border-radius: 50%;">
+          <div class="card-body">
+            <p class="card-title">{{ this.username }}</p>
+            <h5 class="card-text">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            
+          </div>
+          <button class="btn btn-success" (click)="startChat()" >
+            <i class="bi bi-chat"></i> Chat in SKillProChat
+          </button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <app-footer></app-footer>
+  
